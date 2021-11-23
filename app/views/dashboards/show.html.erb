@@ -1,0 +1,13 @@
+<h1>Dashboards#show</h1>
+<p>Find me in app/views/dashboards/show.html.erb</p>
+
+<%# <% if policy(Dashboard).create? %> %>
+  <%# <%= link_to "My dashboard", new_dashboard_path %> %>
+<%# <% end %> %>
+
+
+<% @dashboards.each do |dashboard| %>
+  <% if policy(dashboard).edit? %>
+    <%= link_to "Update", edit_dashboard_path(dashboard) %>
+  <% end %>
+<% end %>

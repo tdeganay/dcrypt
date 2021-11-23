@@ -18,19 +18,16 @@ class DashboardsController < ApplicationController
   #   record.user == user
   # end
 
-
   private
 
   def twitter
-
     # This script uses your bearer token to authenticate and make a Search request
 
     # The code below sets the bearer token from your environment variables
     # To set environment variables on Mac OS X, run the export command below from the terminal:
     # export BEARER_TOKEN='YOUR-TOKEN'
-    bearer_token = ENV['TWITTER_BEARER_TOKEN']
+    bearer_token = ENV["TWITTER_BEARER_TOKEN"]
 
-    p bearer_token
     # Endpoint URL for the Recent Search API
     search_url = "https://api.twitter.com/2/tweets/search/recent"
 
@@ -52,9 +49,8 @@ class DashboardsController < ApplicationController
       # "poll.fields": "options"
     }
 
-    response = search_tweets(search_url, bearer_token, query_params)
-    puts response.code, JSON.pretty_generate(JSON.parse(response.body))
-
+    @response = search_tweets(search_url, bearer_token, query_params)
+    puts @response.code, JSON.pretty_generate(JSON.parse(@response.body))
   end
 
   def search_tweets(url, bearer_token, query_params)

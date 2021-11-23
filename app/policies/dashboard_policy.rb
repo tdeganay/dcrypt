@@ -4,9 +4,13 @@ class DashboardPolicy < ApplicationPolicy
       scope.all
     end
 
-    def create?
-    return true
-    end
+  end
 
+  def create?
+    return true
+  end
+
+  def show?
+    record.user == user
   end
 end

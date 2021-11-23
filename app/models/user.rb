@@ -8,5 +8,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: { case_sensitive: false }, format: { with: regex_email }, presence: true
   validates :username, presence: true
   has_many :dashboards
-  # has_many :twitter_blocks, :news_blocks, :key_figures_blocks, through: :dashboards
+  has_many :twitter_blocks, through: :dashboards
+  has_many :news_blocks, through: :dashboards
+  has_many :key_figures_blocks, through: :dashboards
 end

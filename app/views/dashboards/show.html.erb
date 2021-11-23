@@ -7,3 +7,5 @@
 <% if policy(@dashboard).edit? %>
   <%= link_to "Update", edit_dashboard_path(@dashboard) %>
 <% end %>
+
+<%= @response.body["data"] %>

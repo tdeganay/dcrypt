@@ -19,16 +19,9 @@ class DashboardsController < ApplicationController
   # end
 
 
-
   private
 
   def twitter
-    # client = Twitter::REST::Client.new do |config|
-    #   config.consumer_key        = "Il7X9GFJG9qukqZHE5nJ5O7ek"
-    #   config.consumer_secret     = "hOgZewTH2p7eiQzopDdA8gojQuHP9SPO6askqEZ6YiDDVVE02R"
-    #   config.access_token        = "47867559-CYBcmAPa5TSwgQDcjAG5QdZVExvLhrlur3c6JJjCy"
-    #   config.access_token_secret = "Ox4Icc4wY28C4xHjWdvWvOJTJp0fHGOT27vX3gisAHkZi"
-    # end
 
     # This script uses your bearer token to authenticate and make a Search request
 

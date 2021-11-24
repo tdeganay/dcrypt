@@ -31,6 +31,7 @@ class DashboardsController < ApplicationController
     # Endpoint URL for the Recent Search API
     search_url = "https://api.twitter.com/2/tweets/search/recent"
 
+
     # Set the query value here. Value can be up to 512 characters
     query = "from:tdeganay"
 

@@ -1,0 +1,42 @@
+.twitter-card {
+  padding: 5px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin: 1px;
+}
+
+.tweet-avatar {
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+.tweet-info {
+display: flex;
+justify-content: space-between;
+
+}
+
+.user-data {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 33%;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+}
+
+.user-info {
+  p {
+    margin: 0;
+  }
+}

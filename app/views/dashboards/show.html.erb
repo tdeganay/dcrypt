@@ -3,10 +3,9 @@
 
 
 
-
 <% if policy(@dashboard).edit? %>
   <%= link_to "Update", edit_dashboard_path(@dashboard) %>
 <% end %>
 
-<br> <br>
-<%= render 'shared/twitter' %>
+<%= render 'shared/twitter_card' %>
+

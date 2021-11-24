@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_23_111549) do
+ActiveRecord::Schema.define(version: 2021_11_24_133801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,20 @@ ActiveRecord::Schema.define(version: 2021_11_23_111549) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dashboard_id"], name: "index_news_blocks_on_dashboard_id"
+  end
+
+  create_table "tweets", force: :cascade do |t|
+    t.bigint "twitter_block_id", null: false
+    t.string "text"
+    t.string "user"
+    t.string "username"
+    t.string "url"
+    t.string "image_url"
+    t.date "created_on"
+    t.string "profile_picture"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["twitter_block_id"], name: "index_tweets_on_twitter_block_id"
   end
 
   create_table "twitter_blocks", force: :cascade do |t|
@@ -60,5 +74,6 @@ ActiveRecord::Schema.define(version: 2021_11_23_111549) do
   add_foreign_key "dashboards", "users"
   add_foreign_key "key_figures_blocks", "dashboards"
   add_foreign_key "news_blocks", "dashboards"
+  add_foreign_key "tweets", "twitter_blocks"
   add_foreign_key "twitter_blocks", "dashboards"
 end

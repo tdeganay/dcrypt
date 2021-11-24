@@ -33,7 +33,7 @@ class DashboardsController < ApplicationController
 
 
     # Set the query value here. Value can be up to 512 characters
-    query = "dcrypting" #{search} OR #{search} OR '#{search}' lang:en "
+    query = "from:tdeganay"
 
     # Add or remove parameters below to adjust the query and response fields within the payload
     # See docs for list of param options: https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent
@@ -44,7 +44,9 @@ class DashboardsController < ApplicationController
       # "end_time": "2020-07-02T18:00:00Z",
       # "expansions": "ag",
       "tweet.fields": "attachments,author_id,conversation_id,created_at,entities,id,lang",
+
       "user.fields": "description,name,username,profile_image_url",
+
       "media.fields": "url"
       # "place.fields": "country_code",
       # "poll.fields": "options"

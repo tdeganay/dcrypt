@@ -201,6 +201,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    ruby-oembed (0.15.0)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -299,6 +300,7 @@ DEPENDENCIES
   pundit
   rails (~> 6.0.4, >= 6.0.4.1)
   redis (~> 4.0)
+  ruby-oembed
   sass-rails (>= 6)
   selenium-webdriver
   simple_form

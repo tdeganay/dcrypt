@@ -38,6 +38,7 @@ gem 'simple_form'
 gem 'typhoeus'
 gem 'oauth'
 gem 'twitter'
+gem 'ruby-oembed'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

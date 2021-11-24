@@ -1,0 +1,46 @@
+=> [31m[1;31m"[0m[31m<!doctype html>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m<html>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m<head>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <title>Example Domain</title>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <meta charset=[1;35m\"[0m[31mutf-8[1;35m\"[0m[31m />[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <meta http-equiv=[1;35m\"[0m[31mContent-type[1;35m\"[0m[31m content=[1;35m\"[0m[31mtext/html; charset=utf-8[1;35m\"[0m[31m />[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <meta name=[1;35m\"[0m[31mviewport[1;35m\"[0m[31m content=[1;35m\"[0m[31mwidth=device-width, initial-scale=1[1;35m\"[0m[31m />[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <style type=[1;35m\"[0m[31mtext/css[1;35m\"[0m[31m>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    body {[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        background-color: #f0f0f2;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        margin: 0;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        padding: 0;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        font-family: -apple-system, system-ui, BlinkMacSystemFont, [1;35m\"[0m[31mSegoe UI[1;35m\"[0m[31m, [1;35m\"[0m[31mOpen Sans[1;35m\"[0m[31m, [1;35m\"[0m[31mHelvetica Neue[1;35m\"[0m[31m, Helvetica, Arial, sans-serif;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        [1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    }[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    div {[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        width: 600px;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        margin: 5em auto;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        padding: 2em;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        background-color: #fdfdff;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        border-radius: 0.5em;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    }[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    a:link, a:visited {[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        color: #38488f;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        text-decoration: none;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    }[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    @media (max-width: 700px) {[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        div {[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m            margin: 0 auto;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m            width: auto;[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m        }[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    }[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    </style>    [1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m</head>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m<body>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m<div>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <h1>Example Domain</h1>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <p>This domain is for use in illustrative examples in documents. You may use this[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    domain in literature without prior coordination or asking for permission.</p>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m    <p><a href=[1;35m\"[0m[31mhttps://www.iana.org/domains/example[1;35m\"[0m[31m>More information...</a></p>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m</div>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m</body>[1;35m\n[0m[31m[1;31m"[0m[31m[0m +
+[31m[1;31m"[0m[31m</html>[1;35m\n[0m[31m[1;31m"[0m[31m[0m

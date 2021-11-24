@@ -31,6 +31,7 @@ class DashboardsController < ApplicationController
     # Endpoint URL for the Recent Search API
     search_url = "https://api.twitter.com/2/tweets/search/recent"
 
+
     # Set the query value here. Value can be up to 512 characters
     query = "from:tdeganay"
 
@@ -41,16 +42,18 @@ class DashboardsController < ApplicationController
       "max_results": 10,
       # "start_time": "2020-07-01T00:00:00Z",
       # "end_time": "2020-07-02T18:00:00Z",
-      # "expansions": "attachments.poll_ids,attachments.media_keys,author_id",
+      # "expansions": "ag",
       "tweet.fields": "attachments,author_id,conversation_id,created_at,entities,id,lang",
-      "user.fields": "description,name,username",
+
+      "user.fields": "description,name,username,profile_image_url",
+
       "media.fields": "url"
       # "place.fields": "country_code",
       # "poll.fields": "options"
     }
-
     @response = search_tweets(search_url, bearer_token, query_params)
-    puts @response.code, JSON.pretty_generate(JSON.parse(@response.body))
+    parse = JSON.parse(@response.body)
+    @tweets = parse
   end
 
   def search_tweets(url, bearer_token, query_params)

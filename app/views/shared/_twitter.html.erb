@@ -1,3 +1,15 @@
-<% @twitter = JSON.parse(@response.body) %>
+<% @twitter = @response %>
 
-<%= @twitter["data"][0] %>
+<% @tweet_data = @response["data"] %>
+<% @tweet_includes = @response["includes"] %>
+
+<pre>
+<%= JSON.pretty_generate(@twitter["data"]) %>
+</pre>
+
+
+<br><br><br><br>
+
+<pre>
+<%= JSON.pretty_generate(@twitter["includes"]) %>
+</pre>

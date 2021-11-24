@@ -42,18 +42,19 @@ class DashboardsController < ApplicationController
       "max_results": 10,
       # "start_time": "2020-07-01T00:00:00Z",
       # "end_time": "2020-07-02T18:00:00Z",
-      # "expansions": "ag",
+      "expansions": "author_id,referenced_tweets.id",
       "tweet.fields": "attachments,author_id,conversation_id,created_at,entities,id,lang",
-
       "user.fields": "description,name,username,profile_image_url",
-
       "media.fields": "url"
       # "place.fields": "country_code",
       # "poll.fields": "options"
     }
-    @response = search_tweets(search_url, bearer_token, query_params)
-    parse = JSON.parse(@response.body)
-    @tweets = parse
+
+    @response = JSON.parse(search_tweets(search_url, bearer_token, query_params).body)
+    store_tweets
+
+    # @response = JSON.parse(search_tweets(search_url, bearer_token, query_params).body)
+    # puts @response.code, JSON.pretty_generate(JSON.parse(@response.body))
   end
 
   def search_tweets(url, bearer_token, query_params)
@@ -70,5 +71,22 @@ class DashboardsController < ApplicationController
     response = request.run
 
     return response
+  end
+
+  def store_tweets
+    @tweet_data = @response["data"]
+    @tweet_users = @response["includes"]["users"]
+
+    @tweet_data.each do |tweet|
+      author_id = tweet["author_id"]
+      author = @tweet_users.find { |user| user["id"] == author_id }
+      url = tweet["entities"]["urls"]
+      Tweet.create!(text: tweet.dig("text"), twitter_block_id: 1, user: author.dig("name"),
+                    username: author.dig("username"), profile_picture: author.dig("profile_image_url"),
+                    url: tweet.dig('entities', 'urls', 0, "expanded_url"))
+
+                    # & = si l'objet précédent est défini alors OK et continue, sinon renvoi nil
+    end
+
   end
 end

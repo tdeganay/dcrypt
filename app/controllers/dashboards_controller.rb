@@ -32,7 +32,7 @@ class DashboardsController < ApplicationController
     search_url = "https://api.twitter.com/2/tweets/search/recent"
 
     # Set the query value here. Value can be up to 512 characters
-    query = "from:Twitter OR from:TwitterDev OR from:DailyNasa"
+    query = "$#{search} OR ##{search} OR #{search} OR '#{search}' lang:en "
 
     # Add or remove parameters below to adjust the query and response fields within the payload
     # See docs for list of param options: https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent

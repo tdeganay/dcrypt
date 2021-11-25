@@ -18,3 +18,24 @@
     color: white;
   }
 }
+
+.secondary-button {
+  color: white;
+  background-color: $primary-blue;
+  padding: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #2A2755 !important;
+    color: white;
+  }
+  &:active {
+    background-color: #2A2755 !important;
+    color: white;
+  }
+  &:visited {
+    background-color: $primary-blue !important;
+    color: white;
+  }
+}

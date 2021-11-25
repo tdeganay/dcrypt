@@ -13,11 +13,12 @@ class MessariApi
     JSON.parse(res.body)
   end
 
-  # def top_graph(coin, start_date, end_date)
-  #   url = '/assets?fields=id,slug,symbol,metrics/market_data/price_usd'
-  #   res = self.class.get(url, @options)
-  #   JSON.parse(res.body)
-  # end
+  def top_graph(coin, start_date, end_date)
+    url = "assets/#{coin}/metrics/price/time-series?start=#{start_date}&end=#{end_date}"
+    # url = "assets/#{coin}/metrics/price/time-series?start=2020-01-01&end=2020-01-07"
+    res = self.class.get(url, @options)
+    JSON.parse(res.body)
+  end
 
 
   #   top_graphs = JSON.parse(URI.open(url).read)["data"]

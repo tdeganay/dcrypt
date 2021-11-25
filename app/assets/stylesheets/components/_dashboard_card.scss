@@ -1,0 +1,10 @@
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.block-card {
+  height: 356px;
+  width: 356px;
+}

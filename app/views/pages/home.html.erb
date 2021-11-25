@@ -1,2 +1,77 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://imagizer.imageshack.com/img922/6229/1uPXWs.png);">
+  <div class="container">
+    <div id="title" style="color: white;" class="mb-4">
+      <h1>Update your <span style="text-decoration: line-through;">knowledge</span></h1>
+      <h1>yourself</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "search a block..."
+        %>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+        <%= link_to new_user_session_path, class: "primary-button" do %>
+          <strong>Show me the data</strong>
+          <i class="fas fa-search"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="d-inline-flex col-sm-12 col-md-6 col-lg-6">
+  <h1>Discover the awesome blocks made by our community!</h1>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-sm-12 col-md-4 col-lg-4" style="background-color: red; width: 356px; height: 356px;">
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4" style="background-color: red; width: 356px; height: 356px;">
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4" style="background-color: red; width: 356px; height: 356px;">
+    </div>
+  </div>
+</div>
+
+<div class="trending-section" style="height: 286px;">
+  <div class="container">
+    <div class="row justify-content-between align-self-center" style="background-color: $primary-blue;">
+      <div class="col-sm-12 col-md-4 col-lg-4 d-flex" style="width: 356px; height: 356px;">
+        <h3 class="align-self-center" style="color: white; position: relative; top: -34px;">
+          These blocks are trending! Add one to your dashboard right now!
+        </h3>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4" style="background-color: red; width: 356px; height: 356px; position: relative; top: -34px;">
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4" style="background-color: red; width: 356px; height: 356px; position: relative; top: -34px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="reassurance-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 keynumber">
+        <p>More than</p>
+        <h1>25k</h1>
+        <h3>dashboards</h3>
+      </div>
+       <div class="col-sm-6 col-md-3 keynumber">
+        <p>More than</p>
+        <h1>42k</h1>
+        <h3>dashers</h3>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 align-self-center" style="background-image: url(https://imagizer.imageshack.com/img923/2711/VArgll.png);  background-color: rgba(0,0,0,0.3)">
+        <h2>Join the network</h2>
+        <p class="sub-heading">Be wise a up to date!</p>
+        <%= link_to new_user_session_path, class: "secondary-button" do %>
+          <strong>Become a dasher</strong>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

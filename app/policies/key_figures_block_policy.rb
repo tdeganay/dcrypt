@@ -3,18 +3,21 @@ class KeyFiguresBlockPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
     def create?
-    return true
+      return true
     end
 
     def update?
-    record.user == user
+      record.dashboard.user == user
     end
 
     def destroy?
-    record.user == user
+      record.dashboard.user == user
     end
 
-  end
+    def show?
+      record.dashboard.user == user
+    end
 end

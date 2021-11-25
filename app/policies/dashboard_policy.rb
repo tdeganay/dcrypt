@@ -3,7 +3,6 @@ class DashboardPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-
   end
 
   def create?
@@ -12,5 +11,6 @@ class DashboardPolicy < ApplicationPolicy
 
   def show?
     record.user == user
+    user.admin == true
   end
 end

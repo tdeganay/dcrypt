@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_133801) do
+ActiveRecord::Schema.define(version: 2021_11_25_153444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,17 +23,23 @@ ActiveRecord::Schema.define(version: 2021_11_24_133801) do
   end
 
   create_table "key_figures_blocks", force: :cascade do |t|
-    t.bigint "dashboard_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dashboard_id"], name: "index_key_figures_blocks_on_dashboard_id"
   end
 
   create_table "news_blocks", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.string "block_type", null: false
+    t.bigint "block_id", null: false
     t.bigint "dashboard_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dashboard_id"], name: "index_news_blocks_on_dashboard_id"
+    t.index ["block_type", "block_id"], name: "index_positions_on_block_type_and_block_id"
+    t.index ["dashboard_id"], name: "index_positions_on_dashboard_id"
   end
 
   create_table "tweets", force: :cascade do |t|
@@ -51,10 +57,9 @@ ActiveRecord::Schema.define(version: 2021_11_24_133801) do
   end
 
   create_table "twitter_blocks", force: :cascade do |t|
-    t.bigint "dashboard_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dashboard_id"], name: "index_twitter_blocks_on_dashboard_id"
+    t.string "user_string"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,15 +70,13 @@ ActiveRecord::Schema.define(version: 2021_11_24_133801) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "admin"
     t.string "username"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "dashboards", "users"
-  add_foreign_key "key_figures_blocks", "dashboards"
-  add_foreign_key "news_blocks", "dashboards"
+  add_foreign_key "positions", "dashboards"
   add_foreign_key "tweets", "twitter_blocks"
-  add_foreign_key "twitter_blocks", "dashboards"
 end

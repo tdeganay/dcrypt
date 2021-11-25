@@ -1,13 +1,24 @@
 <h1>Dashboards#show</h1>
 <p>Find me in app/views/dashboards/show.html.erb</p>
 
+<%= link_to "New Twitter block", new_dashboard_twitter_block_path(@dashboard) %>
 
 
 <% if policy(@dashboard).edit? %>
   <%= link_to "Update", edit_dashboard_path(@dashboard) %>
 <% end %>
 
+<% @dashboard.positions.each do |position| %>
+  <%= render layout: "/layouts/blocks" do %>
+    <%= position.block_type.underscore %>
+    <%= position.block %>
+    <%= link_to 'destroy', position_path(position), method: :delete %>
+
 <%= render layout: "/layouts/blocks" do %>
-<%= render partial: '/shared/twitter_card' %>
-<%= render partial: '/shared/twitter_icon' %>
+    <% case position.block_type %>
+    <% when 'TwitterBlock' %>
+      <%= render partial: '/shared/twitter_card' %>
+      <%= render partial: '/shared/twitter_icon' %>
+    <% end %>
+  <% end %>
 <% end %>

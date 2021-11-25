@@ -10,15 +10,15 @@ class TwitterBlockPolicy < ApplicationPolicy
     end
 
     def update?
-      record.dashboard.user == user
+      record.user == user
     end
 
     def destroy?
-      record.dashboard.user == user
+      record.user == user
     end
 
     def show?
-      record.dashboard.user == user
+      record.user == user
     end
 
 end

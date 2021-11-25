@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+  <div class="container">
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "logo-couleur.png" %>
     <% end %>
@@ -11,8 +11,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+          <li class="nav-item active align-self-center search-nav">
+            <a href="#" style="position: relative; top: -2px;">
+             <i class="fas fa-search"></i>
+            </a>
           </li>
           <li class="nav-item">
             <%= link_to "Dashboard", "#", class: "nav-link" %>

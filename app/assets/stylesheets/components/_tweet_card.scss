@@ -1,10 +1,12 @@
 .twitter-card {
   padding: 5px;
   width: 100%;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  margin: 1px;
+  background-color: white;
+
+  border: solid 2px #E5E5EB;
+  width: 356px;
+  border-radius: 7px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .tweet-avatar {
@@ -24,19 +26,28 @@ justify-content: space-between;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 33%;
+  width: 40%;
 }
 
 .date {
   display: flex;
   align-items: center;
+  padding: 5px;
   p {
-    margin: 0;
+    padding-inline: 3px;
   }
 }
 
 .user-info {
-  p {
-    margin: 0;
+  display: flex;
+}
+
+.name {
+  padding-inline-start: 5px;
   }
+
+.tweet-text {
+  color: inherit;
+  margin: 1px;
+  font-family: inherit;
 }

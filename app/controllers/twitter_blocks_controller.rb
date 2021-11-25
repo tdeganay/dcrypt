@@ -7,14 +7,21 @@ class TwitterBlocksController < ApplicationController
 
   def new
     @twitter_block = TwitterBlock.new
+    @dashboard = Dashboard.find(params[:dashboard_id])
+    authorize @twitter_block
   end
 
   def create
-    authorize @dashboard
+
     @twitter_block = TwitterBlock.new(twitter_block_params)
-    @user = @dashboard.user
+    @dashboard = Dashboard.find(params[:dashboard_id])
+
+
+    authorize @twitter_block
     if @twitter_block.save
-      redirect_to dashboard_path
+      @position = Position.new(dashboard: @dashboard, block: @twitter_block)
+      @position.save
+      redirect_to dashboard_path(@dashboard)
     else
       render :new
     end
@@ -36,7 +43,7 @@ class TwitterBlocksController < ApplicationController
   private
 
   def twitter_block_params
-    params.require(:twitter_block).permit(dashboard_id)
+    params.require(:twitter_block).permit(:user_string)
   end
 
   def find_twitter_block

@@ -1,19 +1,21 @@
-
-<% @tweets.each do |tweet| %>
-  <div class="container twitter-card">
-    <div class="tweet-info">
-      <div class="user-data">
-        <img class="tweet-avatar" src="<%= tweet.profile_picture %>"  alt="avatar">
-        <div class="user-info">
-          <p> <%= tweet.user %> <%= tweet.username %> </p>
+<h2 class="tw-title">Twitter block</h2>
+<div class="tw-card-scroller">
+  <% @tweets.each do |tweet| %>
+    <div class="container twitter-card">
+      <div class="tweet-info">
+        <div class="user-data">
+          <img class="tweet-avatar" src="<%= tweet.profile_picture %>"  alt="avatar">
+          <div class="user-info">
+            <p> <%= tweet.user %> <%= tweet.username %> </p>
+          </div>
+        </div>
+        <div class="date">
+          <p><%= tweet.created_on  %></p>
         </div>
       </div>
-      <div class="date">
-        <p><%= tweet.created_on  %></p>
+      <div class="tweet-text">
+        <p><%= tweet.text %></p>
       </div>
     </div>
-    <div class="tweet-text">
-      <p><%= tweet.text %></p>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

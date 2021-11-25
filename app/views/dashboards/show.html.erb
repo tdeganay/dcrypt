@@ -13,7 +13,12 @@
     <%= position.block_type.underscore %>
     <%= position.block %>
     <%= link_to 'destroy', position_path(position), method: :delete %>
-    <%#= render partial: '/shared/twitter_card' %>
 
+<%= render layout: "/layouts/blocks" do %>
+    <% case position.block_type %>
+    <% when 'TwitterBlock' %>
+      <%= render partial: '/shared/twitter_card' %>
+      <%= render partial: '/shared/twitter_icon' %>
+    <% end %>
   <% end %>
 <% end %>

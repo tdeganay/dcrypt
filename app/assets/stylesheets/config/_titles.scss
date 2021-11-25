@@ -7,7 +7,6 @@ h3 {
   font-family: $body-font !important;
   font-size: 24px;
   color: $primary-blue;
-
 }
 .sub-heading {
   font-family: $body-font;
@@ -17,5 +16,5 @@ h3 {
 
 p {
   font-family: $body-font;
-  color: $primary-blue;
+  color: $primary-blue !important;
 }

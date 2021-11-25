@@ -1,12 +1,36 @@
+.tw-card-scroller {
+  overflow-y: auto;
+  scrollbar-color: #888 #555;
+  scrollbar-width: thin;
+  margin-bottom: 40px;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
 .twitter-card {
   padding: 5px;
   width: 100%;
-  background-color: white;
-
-  border: solid 2px #e5e5eb;
-  width: 356px;
-  border-radius: 7px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: rgb(249, 249, 249);
+  text-align: left;
+  border-bottom: solid 2px #e5e5eb;
+  width: 320px;
 }
 
 .tweet-avatar {
@@ -48,5 +72,40 @@
 .tweet-text {
   color: inherit;
   margin: 1px;
+  font-family: $body-font;
+}
+
+.btn.card {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: $primary-green;
+  padding: 0;
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  text-align: center;
+  &:hover {
+    background-color: #7ae1ba !important;
+    color: white;
+  }
+  &:active {
+    background-color: #7ae1ba !important;
+    color: white;
+  }
+  &:visited {
+    background-color: $primary-green !important;
+    color: white;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    padding: 3px 5px 5px 5px;
+  }
+}
+
+.tw-title {
   font-family: $body-font;
 }

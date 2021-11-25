@@ -1,2 +1,6 @@
 <h1>TwitterBlock#new</h1>
 <p>Find me in app/views/twitter_block/new.html.erb</p>
+<%= simple_form_for([@dashboard, @twitter_block]) do |f| %>
+  <%= f.input :user_string %>
+  <%= f.submit %>
+<% end %>

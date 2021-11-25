@@ -1,5 +1,23 @@
+<div class="action-bar navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+          <i class="far fa-plus-square"></i>
+          <p>Add a Twitter block</p>
+        <% end %>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <%= link_to "New News block", new_dashboard_twitter_block_path(@dashboard) %>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <%= link_to "New Data block", new_dashboard_twitter_block_path(@dashboard) %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <h1>Dashboards#show</h1>
-<p>Find me in app/views/dashboards/show.html.erb</p>
 
 
 
@@ -7,6 +25,17 @@
   <%= link_to "Update", edit_dashboard_path(@dashboard) %>
 <% end %>
 
+<% @dashboard.positions.each do |position| %>
+  <%= render layout: "/layouts/blocks" do %>
+    <%= position.block_type.underscore %>
+    <%= position.block %>
+    <%= link_to 'destroy', position_path(position), method: :delete %>
+
 <%= render layout: "/layouts/blocks" do %>
-  <%= render partial: '/shared/twitter_card' %>
+    <% case position.block_type %>
+    <% when 'TwitterBlock' %>
+      <%= render partial: '/shared/twitter_card' %>
+      <%= render partial: '/shared/twitter_icon' %>
+    <% end %>
+  <% end %>
 <% end %>

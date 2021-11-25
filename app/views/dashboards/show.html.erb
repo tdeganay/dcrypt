@@ -1,7 +1,11 @@
 <h1>Dashboards#show</h1>
+  <div class="action-bar">
+    <div>
+      <%= link_to "New Twitter block", new_dashboard_twitter_block_path(@dashboard) %>
+    </div>
+  </div>
 <p>Find me in app/views/dashboards/show.html.erb</p>
 
-<%= link_to "New Twitter block", new_dashboard_twitter_block_path(@dashboard) %>
 
 
 <% if policy(@dashboard).edit? %>

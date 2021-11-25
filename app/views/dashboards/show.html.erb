@@ -1,10 +1,23 @@
-<h1>Dashboards#show</h1>
-  <div class="action-bar">
-    <div>
-      <%= link_to "New Twitter block", new_dashboard_twitter_block_path(@dashboard) %>
+<div class="action-bar navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+          <i class="far fa-plus-square"></i>
+          <p>Add a Twitter block</p>
+        <% end %>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <%= link_to "New News block", new_dashboard_twitter_block_path(@dashboard) %>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <%= link_to "New Data block", new_dashboard_twitter_block_path(@dashboard) %>
+      </div>
     </div>
   </div>
-<p>Find me in app/views/dashboards/show.html.erb</p>
+</div>
+
+<h1>Dashboards#show</h1>
 
 
 

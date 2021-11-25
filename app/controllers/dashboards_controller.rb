@@ -4,6 +4,7 @@ class DashboardsController < ApplicationController
     @dashboard = Dashboard.find(params[:id])
     authorize @dashboard
     @response = FetchAndSaveTweets.new(TwitterBlock.first).call
+    @tweets = Tweet.last(2)
   end
 
   def update?

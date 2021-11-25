@@ -6,6 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.where(email: 'Dashy@Dcrypt.com').first
-user.admin = true
-user.save
+puts "creating test user"
+
+User.create!(email: "test@test.fr", password: 123456, username: "test", admin: false)
+
+puts "creating admin user"
+
+User.create!(email: "admin@admin.fr", password: 123456, username: "admin", admin: true)
+
+puts "creating test and admin dashboards"
+
+Dashboard.create!(user_id: 1)
+Dashboard.create!(user_id: 2)

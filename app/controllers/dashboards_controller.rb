@@ -3,7 +3,6 @@ class DashboardsController < ApplicationController
   def show
     @dashboard = Dashboard.find(params[:id])
     authorize @dashboard
-    # remove comment to fetch tweet and save them in Tweets database
     # @response = FetchAndSaveTweets.new(TwitterBlock.first).call
     @tweets = Tweet.last(2)
   end

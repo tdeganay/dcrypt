@@ -1,15 +1,31 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  z-index: 2;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
+.nav-item a {
+  color: $primary-blue !important;
+}
 .navbar-lewagon .navbar-brand img {
   height: 34px;
 }
 .navbar-brand {
   font-family: "Vox-Bold";
+}
+.action-bar {
+  background-color: white;
+  box-shadow: 0px 6px 24px 0px rgba(147, 149, 175, .2);
+}
+.action-bar a{
+    color: $primary-blue !important;
+    font-size: 16px;
+    text-decoration: none;
+}
+.action-bar i{
+    color: $primary-blue !important;
+    font-size: 24px;
 }

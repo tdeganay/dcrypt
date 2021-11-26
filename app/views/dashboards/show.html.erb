@@ -37,7 +37,8 @@
     <% @dashboard.positions.each do |position| %>
       <%= render layout: "/layouts/blocks" do %>
         <div class="flexer">
-          <%= position.block_type.underscore %>
+          <span class="block-title"><%= position.block_type.underscore.capitalize %></span>
+          <span class="search-tag">#<%= position.block.user_string %></span>
           <%= link_to position_path(position), method: :delete do %>
             <i class="far fa-trash-alt"></i>
           <% end %>

@@ -14,6 +14,15 @@ h3 {
   font-weight: 400;
   margin-bottom: 24px !important;
 }
+.back-link a, i{
+  color: $primary-green !important;
+  text-decoration: none;
+}
+.back-link i{
+  color: $primary-green !important;
+  text-decoration: none;
+  font-size: 16px;
+}
 
 p {
   font-family: $body-font;

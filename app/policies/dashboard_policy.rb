@@ -11,6 +11,6 @@ class DashboardPolicy < ApplicationPolicy
 
   def show?
     record.user == user
-    user.admin == true
+    # user.admin == true
   end
 end

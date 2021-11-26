@@ -1,6 +1,19 @@
-<h1>TwitterBlock#new</h1>
-<p>Find me in app/views/twitter_block/new.html.erb</p>
-<%= simple_form_for([@dashboard, @twitter_block]) do |f| %>
-  <%= f.input :user_string %>
-  <%= f.submit %>
-<% end %>
+<div class="blue-background row d-flex align-items-center">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="container p-5">
+          <p style="color: white !important;" class="back-link">
+            <i class="far fa-arrow-left"></i>
+            <%= link_to 'Back to the dashboard', :back %>
+          </p>
+          </a>
+          <h1 style="color: white;" class="mb-5">Add a new Twitter block to my Dashboard</h1>
+          <h3 style="color: white !important;" class="mb-5">Follow your favorites feeds to know your next move</h3>
+          <%= simple_form_for([@dashboard, @twitter_block]) do |f| %>
+            <%= f.input :user_string, class:"form-dark" %>
+            <%= f.button :submit, "Add a Twitter block", class:"primary-button mt-2" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-8 col-lg-8 new-image">
+      </div>
+</div>

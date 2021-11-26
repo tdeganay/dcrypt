@@ -1,18 +1,22 @@
 <div class="action-bar navbar">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
-          <i class="far fa-plus-square"></i>
-          <p>Add a Twitter block</p>
-        <% end %>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to "New News block", new_dashboard_twitter_block_path(@dashboard) %>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to "New Data block", new_dashboard_twitter_block_path(@dashboard) %>
-      </div>
+  <div class="container row text-center">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+        <i class="fak fa-add-block"></i>
+        <p>Add a Twitter block</p>
+      <% end %>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+        <i class="fak fa-add-block"></i>
+        <p>Add a News block</p>
+      <% end %>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+        <i class="fak fa-add-block"></i>
+        <p>Add a Key figures block</p>
+      <% end %>
     </div>
   </div>
 </div>
@@ -27,15 +31,12 @@
 
 <% @dashboard.positions.each do |position| %>
   <%= render layout: "/layouts/blocks" do %>
-    <%= position.block_type.underscore %>
-    <%= position.block %>
+      <%= position.block_type.underscore %>
     <%= link_to 'destroy', position_path(position), method: :delete %>
-
-<%= render layout: "/layouts/blocks" do %>
-    <% case position.block_type %>
-    <% when 'TwitterBlock' %>
-      <%= render partial: '/shared/twitter_card' %>
-      <%= render partial: '/shared/twitter_icon' %>
-    <% end %>
+      <% case position.block_type %>
+      <% when 'TwitterBlock' %>
+        <%= render partial: '/shared/twitter_card' %>
+        <%= render partial: '/shared/twitter_icon' %>
+      <% end %>
   <% end %>
 <% end %>

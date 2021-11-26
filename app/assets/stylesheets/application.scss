@@ -3,6 +3,7 @@
 @import "config/colors";
 @import "config/bootstrap_variables";
 @import "config/titles";
+@import "config/backgrounds";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -16,4 +17,5 @@
 @import "components/form";
 @import "components/elements";
 @import "components/navbar";
+@import "components/image";
 @import "pages/index";

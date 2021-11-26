@@ -7,15 +7,24 @@ h3 {
   font-family: $body-font !important;
   font-size: 24px;
   color: $primary-blue;
-
 }
 .sub-heading {
   font-family: $body-font;
   color: white;
   font-weight: 400;
+  margin-bottom: 24px !important;
+}
+.back-link a, i{
+  color: $primary-green !important;
+  text-decoration: none;
+}
+.back-link i{
+  color: $primary-green !important;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 p {
   font-family: $body-font;
-  color: $primary-blue;
+  color: $primary-blue !important;
 }

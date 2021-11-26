@@ -21,8 +21,6 @@
   </div>
 </div>
 
-<h1>Dashboards#show</h1>
-
 
 
 <% if policy(@dashboard).edit? %>
@@ -35,7 +33,7 @@
     <%= link_to 'destroy', position_path(position), method: :delete %>
       <% case position.block_type %>
       <% when 'TwitterBlock' %>
-        <%= render partial: '/shared/twitter_card' %>
+        <%= render partial: '/shared/twitter_card', locals: {block: position.block} %>
         <%= render partial: '/shared/twitter_icon' %>
       <% end %>
   <% end %>

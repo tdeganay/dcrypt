@@ -17,7 +17,7 @@ class FetchAndSaveTweets
 
 
     # Set the query value here. Value can be up to 512 characters
-    query = "from:tdeganay"
+    query = @twitter_block.user_string
 
     # Add or remove parameters below to adjust the query and response fields within the payload
     # See docs for list of param options: https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent
@@ -62,17 +62,21 @@ class FetchAndSaveTweets
 
   def store_tweets
     @tweet_data = @response["data"]
-    @tweet_users = @response["includes"]["users"]
+   if @tweet_data
+      @tweet_users = @response["includes"]["users"]
 
-    @tweet_data.each do |tweet|
-      author_id = tweet["author_id"]
-      author = @tweet_users.find { |user| user["id"] == author_id }
-      url = tweet["entities"]["urls"]
-      Tweet.create!(text: tweet.dig("text"), twitter_block: @twitter_block, user: author.dig("name"),
-                    username: author.dig("username"), profile_picture: author.dig("profile_image_url"),
-                    url: tweet.dig('entities', 'urls', 0, "expanded_url"))
+      @tweet_data.each do |tweet|
+        next if Tweet.find_by(tweet_id: tweet.dig("id"))
 
-        # & = si l'objet précédent est défini alors OK et continue, sinon renvoi nil
+        author_id = tweet["author_id"]
+        author = @tweet_users.find { |user| user["id"] == author_id }
+        url = tweet.dig("entities","urls")
+        Tweet.create!(text: tweet.dig("text"), twitter_block: @twitter_block, user: author.dig("name"),
+                      username: author.dig("username"), profile_picture: author.dig("profile_image_url"),
+                      url: tweet.dig('entities', 'urls', 0, "expanded_url"), tweet_id: tweet.dig("id"))
+
+          # & = si l'objet précédent est défini alors OK et continue, sinon renvoi nil
+      end
     end
   end
 end

@@ -23,6 +23,9 @@
   </div>
 </div>
 
+<div class="dashboard-container">
+  <%= render partial: '/shared/sidebar' %>
+  <div class="dashboard-content">
 
 <div class="container mt-5">
   <h1>My dashboard</h1>
@@ -33,7 +36,6 @@
     <% if policy(@dashboard).edit? %>
       <%= link_to "Update", edit_dashboard_path(@dashboard) %>
     <% end %>
-
     <% @dashboard.positions.each do |position| %>
       <%= render layout: "/layouts/blocks" do %>
         <div class="flexer">
@@ -63,6 +65,4 @@
       </div>
     </div>
   <% end %>
-
-
 </div>

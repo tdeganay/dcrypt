@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 @font-face {
  font-family: "Vox";
- src: url("/fonts/Vox-Bold.woff") format("woff");
+ src: font-url("vox_bold-webfont.woff2") format("woff2"),
+        font-url("vox_bold-webfont.woff") format("woff");
+
 }
 
 // Define fonts for body and headers
 $body-font: 'Source Code Pro', monospace;
-$headers-font: "Vox-Bold";
+$headers-font: "Vox";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

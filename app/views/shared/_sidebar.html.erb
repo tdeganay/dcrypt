@@ -1,19 +1,20 @@
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <%= link_to "#", class: "sidebar-icon" do %>
-        <%= image_tag "icon-blocks-sidebar.png" %>
-        <p>Blocks</p>
+<div id="mySidebar" class="sidebar" data-controller="sidebar" data-action="click->sidebar#close" >
+
+    <%= link_to "#", class: "sidebar-icon", remote: true do %>
+        <i class="fas fa-cubes"></i> <p class="d-none"  data-sidebar-target="sidebar">Blocks</p>
       <% end %>
-    <%= link_to "#", class: "sidebar-icon" do %>
-        <%= image_tag "icon-stats-sidebar.png" %>
-        <p>Statistics</p>
+    <%= link_to "#", class: "sidebar-icon", remote: true do %>
+        <i class="fas fa-chart-bar"></i> <p class="d-none"  data-sidebar-target="sidebar">Statistics</p>
+
       <% end %>
-    <%= link_to "#", class: "sidebar-icon" do %>
-        <%= image_tag "icon-notif-sidebar.png" %>
-        <p>Notifications</p>
+    <%= link_to "#", class: "sidebar-icon", remote: true do %>
+        <i class="far fa-bell"></i> <p class="d-none"  data-sidebar-target="sidebar">Notifications</p>
+
       <% end %>
-    <%= link_to "#", class: "sidebar-icon" do %>
-        <%= image_tag "icon-profile-sidebar.png" %>
-        <p>Profile</p>
-      <% end %>
+    <%= link_to "#", class: "sidebar-icon", remote: true do %>
+     <i class="far fa-user" ></i> <p class="d-none" data-sidebar-target="sidebar">Profile</p>
+    <% end %>
+
+
+
 </div>

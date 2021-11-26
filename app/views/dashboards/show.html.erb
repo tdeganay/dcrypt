@@ -1,12 +1,18 @@
-<h1>Dashboards#show</h1>
-<p>Find me in app/views/dashboards/show.html.erb</p>
+
+<div class="dashboard-container">
+  <%= render partial: '/shared/sidebar' %>
+  <div class="dashboard-content">
+
+    <h1>Dashboards#show</h1>
+    <p>Find me in app/views/dashboards/show.html.erb</p>
 
 
-<% if policy(@dashboard).edit? %>
-  <%= link_to "Update", edit_dashboard_path(@dashboard) %>
-<% end %>
+    <% if policy(@dashboard).edit? %>
+      <%= link_to "Update", edit_dashboard_path(@dashboard) %>
+    <% end %>
 
-<%= render partial: '/shared/sidebar' %>
-<%= render layout: "/layouts/blocks" do %>
-  <%= render partial: '/shared/twitter_card' %>
-<% end %>
+    <%= render layout: "/layouts/blocks" do %>
+      <%= render partial: '/shared/twitter_card' %>
+    <% end %>
+  </div>
+</div>

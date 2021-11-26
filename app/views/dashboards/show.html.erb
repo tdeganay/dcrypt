@@ -34,7 +34,9 @@
 
   <div class="row">
     <% if policy(@dashboard).edit? %>
-      <%= link_to "Update", edit_dashboard_path(@dashboard) %>
+      <%= link_to edit_dashboard_path(@dashboard) do %>
+      <i class="fas fa-pen-square"></i>
+      <% end %>
     <% end %>
     <% @dashboard.positions.each do |position| %>
       <%= render layout: "/layouts/blocks" do %>

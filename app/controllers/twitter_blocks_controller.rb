@@ -29,6 +29,11 @@ class TwitterBlocksController < ApplicationController
 
   def show
     authorize @twitter_block
+    @response = FetchAndSaveTweets.new(@twitter_block).call
+    respond_to do |format|
+      format.html # Follow the flow
+      format.json # Follow the classic Rails flow and look for a show.json view
+    end
   end
 
   def edit

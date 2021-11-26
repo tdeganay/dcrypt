@@ -5,11 +5,12 @@
  font-family: "Vox";
  src: font-url("vox_bold-webfont.woff2") format("woff2"),
         font-url("vox_bold-webfont.woff") format("woff");
+
 }
 
 // Define fonts for body and headers
 $body-font: 'Source Code Pro', monospace;
-$headers-font: "Vox-Bold";
+$headers-font: "Vox";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

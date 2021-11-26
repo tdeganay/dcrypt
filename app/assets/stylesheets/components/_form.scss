@@ -1,4 +1,21 @@
 .form-control {
   padding: 14px !important;
   border-radius: 8px;
+  background-color: transparent !important;
+  border: solid 2px white !important;
+}
+#query {
+  color: white !important;
+}
+.string {
+  color: white;
+}
+.optional {
+  color: white;
+}
+.form-dark {
+  padding: 14px !important;
+  border-radius: 8px;
+  background-color: $primary-blue !important;
+  border: solid 2px white !important;
 }

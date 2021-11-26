@@ -1,18 +1,22 @@
 <div class="action-bar navbar">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
-          <i class="far fa-plus-square"></i>
-          <p>Add a Twitter block</p>
-        <% end %>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to "New News block", new_dashboard_twitter_block_path(@dashboard) %>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to "New Data block", new_dashboard_twitter_block_path(@dashboard) %>
-      </div>
+  <div class="container row text-center">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+        <i class="fak fa-add-block"></i>
+        <p>Add a Twitter block</p>
+      <% end %>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+        <i class="fak fa-add-block"></i>
+        <p>Add a News block</p>
+      <% end %>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+        <i class="fak fa-add-block"></i>
+        <p>Add a Key figures block</p>
+      <% end %>
     </div>
   </div>
 </div>

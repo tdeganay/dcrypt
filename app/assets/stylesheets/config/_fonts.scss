@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 @font-face {
  font-family: "Vox";
- src: url("/fonts/Vox-Bold.woff") format("woff");
+ src: font-url("vox_bold-web.woff2") format("woff2"),
+        font-url("vox_bold-web.woff") format("woff");
 }
 
 // Define fonts for body and headers

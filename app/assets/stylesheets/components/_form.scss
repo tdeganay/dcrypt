@@ -4,9 +4,15 @@
   background-color: transparent !important;
   border: solid 2px white !important;
 }
+
+.form-control:focus {
+  color: white !important;
+}
+
 #query {
   color: white !important;
 }
+
 .string {
   color: white;
 }

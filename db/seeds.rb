@@ -19,9 +19,9 @@ puts "creating test and admin dashboards"
 Dashboard.create!(user_id: 1)
 Dashboard.create!(user_id: 2)
 
-puts "seeding Messari ..."
+# puts "seeding Messari ..."
 
-MessariApi.create!.top_graph("Bitcoin", "2020-01-01", "2020-01-07")
+# MessariApi.create!.top_graph("Bitcoin", "2020-01-01", "2020-01-07")
 
 
 # <%= area_chart Visit.group_by_minute(:created_at).maximum(:load_time) %>

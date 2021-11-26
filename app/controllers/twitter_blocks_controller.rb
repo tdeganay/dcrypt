@@ -43,6 +43,7 @@ class TwitterBlocksController < ApplicationController
   end
 
   def destroy
+    raise
   end
 
   private

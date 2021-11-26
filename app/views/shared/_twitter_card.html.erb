@@ -1,6 +1,7 @@
-<%# <h2 class="tw-title">Twitter block</h2> %>
-<div class="tw-card-scroller">
-  <% @tweets.each do |tweet| %>
+<div class="tw-card-scroller" data-blocks-target="block" data-fetch-url=<%= twitter_block_path(block) %> >
+  <%= "Fetching tweets, have a coffee" if block.tweets.empty? %>
+  <% block.tweets.each do |tweet| %>
+    <%= block.user_string %>
     <div class="container twitter-card">
       <div class="tweet-info">
         <div class="user-data">

@@ -24,8 +24,6 @@
 </div>
 
 
-
-
 <div class="container mt-5">
   <h1>My dashboard</h1>
 
@@ -46,7 +44,7 @@
         </div>
           <% case position.block_type %>
           <% when 'TwitterBlock' %>
-            <%= render partial: '/shared/twitter_card' %>
+            <%= render partial: '/shared/twitter_card' locals: {block: position.block} %>
             <%= render partial: '/shared/twitter_icon' %>
           <% end %>
       <% end %>

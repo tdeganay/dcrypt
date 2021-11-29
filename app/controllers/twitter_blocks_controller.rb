@@ -16,7 +16,6 @@ class TwitterBlocksController < ApplicationController
     @twitter_block = TwitterBlock.new(twitter_block_params)
     @dashboard = Dashboard.find(params[:dashboard_id])
 
-
     authorize @twitter_block
     if @twitter_block.save
       @position = Position.new(dashboard: @dashboard, block: @twitter_block)

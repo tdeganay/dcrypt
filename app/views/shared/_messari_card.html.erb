@@ -1,0 +1,6 @@
+<div class="tw-card-scroller" data-blocks-target="block" data-fetch-url=<%= messari_block_path(block) %> >
+  <%= "Fetching plotables, have a coffee" if block.plotables.empty? %>
+    <%= block.plotables.count %>
+    <%# <%= area_chart Plotable.pluck(:created_at, :value).first(5).to_h %> %>
+    <%= area_chart MessariApi.new(block).top_graph %>
+</div>

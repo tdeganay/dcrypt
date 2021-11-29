@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_26_113249) do
+ActiveRecord::Schema.define(version: 2021_11_29_102513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,26 @@ ActiveRecord::Schema.define(version: 2021_11_26_113249) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "messari_blocks", force: :cascade do |t|
+    t.string "user_string"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "news_blocks", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "plotables", force: :cascade do |t|
+    t.string "title"
+    t.string "username"
+    t.float "value"
+    t.date "current_date"
+    t.bigint "messari_block_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["messari_block_id"], name: "index_plotables_on_messari_block_id"
   end
 
   create_table "positions", force: :cascade do |t|
@@ -78,6 +95,7 @@ ActiveRecord::Schema.define(version: 2021_11_26_113249) do
   end
 
   add_foreign_key "dashboards", "users"
+  add_foreign_key "plotables", "messari_blocks"
   add_foreign_key "positions", "dashboards"
   add_foreign_key "tweets", "twitter_blocks"
 end

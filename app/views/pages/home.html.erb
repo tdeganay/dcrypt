@@ -1,5 +1,6 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://imagizer.imageshack.com/img922/6229/1uPXWs.png);">
-  <div class="container">
+<div class="animated_banner" data-controller="banner" style="background: rgb(62,54,98);
+background: linear-gradient(180deg, rgba(62,54,98,1) 0%, rgba(22,16,50,1) 100%);">
+  <div class="container main-action">
     <div id="title" style="color: white;" class="mb-4">
       <h1>Update <span style="text-decoration: line-through;">your knowledge</span></h1>
       <h1>yourself</h1>
@@ -12,11 +13,14 @@
         placeholder: "search a block..."
         %>
       </div>
-      <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
-        <%= link_to new_user_session_path, class: "primary-button" do %>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <button class="primary-button">
+          <%= link_to new_user_session_path, class: "primary-button" do %>
           <strong>Show me the data</strong>
-          <i class="fas fa-search"></i>
-        <% end %>
+          <i class="fas fa-search" style="color: white !important;"></i>
+          <% end %>
+          <span aria-hidden class="primary-button__glitch"></span>
+        </button>
       </div>
     </div>
   </div>
@@ -71,9 +75,13 @@
       <div class="bd-highlight ms-auto col-sm-12 col-md-4 col-lg-4 align-self-center">
         <h2>Join the network</h2>
         <p class="sub-heading">Be wise and up to date!</p>
-        <%= link_to new_user_session_path, class: "secondary-button" do %>
-          <strong>Become a dasher</strong>
-        <% end %>
+        <button class="secondary-button">
+          <%= link_to new_user_session_path, class: "secondary-button" do %>
+            <strong>Become a dasher</strong>
+            <i class="far fa-arrow-right" style="color: white !important;"></i>
+            <span aria-hidden class="secondary-button__glitch"></span>
+          <% end %>
+        </button>
       </div>
     </div>
   </div>

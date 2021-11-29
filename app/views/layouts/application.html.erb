@@ -12,10 +12,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body class= "<%= "home" if params[:action] == "home" %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <script src="https://kit.fontawesome.com/be2ee351bd.js" crossorigin="anonymous"></script>
+    <script src="https://github.com/mrdoob/three.js"></script>
   </body>
 </html>

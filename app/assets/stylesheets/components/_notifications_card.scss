@@ -1,0 +1,32 @@
+.notifications-card {
+  background-color: #FFFFFF;
+  border-bottom: solid 1px $blueish-background;
+}
+
+.notifications-card-text  {
+  p {
+    margin: 0;
+  }
+
+  #small-text {
+  color: #9395AF !important;
+  font-size: 0.8em;
+  }
+}
+
+.notifications-card-text  {
+  strong {
+    color: $green;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.avatar-notifications-card {
+  object-fit: cover;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}

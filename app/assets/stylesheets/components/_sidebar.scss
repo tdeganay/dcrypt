@@ -5,6 +5,8 @@
   background-color: #161032;
   height: calc(100vh - 60px);
   overflow: auto;
+  margin-top: 60px;
+  z-index: 2;
 }
 
 .sidebar a {

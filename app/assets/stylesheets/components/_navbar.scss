@@ -2,8 +2,16 @@
   justify-content: space-between;
   background: white;
   z-index: 2;
+  width: 100%;
+  position: fixed;
 }
-
+.home .navbar-lewagon {
+  justify-content: space-between;
+  background: transparent;
+  z-index: 2;
+  position: fixed;
+  filter: brightness(0) invert(1);
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }

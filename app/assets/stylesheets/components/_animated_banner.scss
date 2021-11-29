@@ -1,0 +1,25 @@
+.animated-banner{
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #161032));
+    background-image: -webkit-linear-gradient(135deg, #003073, #029797);
+    background-image: -moz-linear-gradient(45deg, #161032, #161032);
+    background-image: -ms-linear-gradient(45deg, #161032 0, #161032 100%);
+    background-image: -o-linear-gradient(45deg, #161032, #161032);
+    background-image: linear-gradient(135deg, #161032, #000000);
+    text-align: center;
+    margin: 0px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 600px !important;
+}
+.main-action {
+  position: relative;
+  top: 300px;
+}
+.main-action h1{
+  color: white;
+}
+canvas {
+  height:400px;
+}

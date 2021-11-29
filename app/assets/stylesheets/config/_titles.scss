@@ -28,3 +28,14 @@ p {
   font-family: $body-font;
   color: $primary-blue !important;
 }
+.link {
+  color: $primary-green;
+  text-decoration: none;
+  &:hover{
+    color: $primary-green;
+    text-decoration: none;
+  }
+}
+.signup-label {
+  color: white;
+}

@@ -1,0 +1,27 @@
+<div class="tw-card-scroller" data-blocks-target="block" data-fetch-url=<%= news_block_path(block) %> >
+  <%= "Fetching news, have a coffee" if block.articles.empty? %>
+  <% block.articles.each do |article| %>
+    <div class="container twitter-card">
+      <div class="tweet-info">
+        <div class="user-data">
+          <img class="tweet-avatar" src="<%= article.author %>"  alt="avatar">
+          <div class="user-info">
+            <p> <%= article.published_at %> <%= article.title %> </p>
+          </div>
+        </div>
+        <div class="date">
+          <p><%= article.created_at  %></p>
+        </div>
+      </div>
+      <div class="tweet-text">
+        <p><%= article.description %></p>
+      </div>
+      <div class="tweet-text">
+        <p><%= article.url %></p>
+      </div>
+      <div class="tweet-text">
+        <p><%= article.text %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

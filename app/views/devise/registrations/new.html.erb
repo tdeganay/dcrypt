@@ -1,25 +1,47 @@
-<h2>Sign up</h2>
+<div class="blue-background row d-flex align-items-center">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+  <div class="col-sm-12 col-md-6 col-lg-6 signup-image">
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+  <div class="col-sm-12 col-md-4 col-lg-4">
+    <div class="container">
 
-<%= render "devise/shared/links" %>
+      <h1 style="color: white">Sign up</h1>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs signup-label">
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      class:"signup-label",
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: true,
+                      class:"signup-label",
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      class:"signup-label",
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+        <div class="row">
+          <div class="col-6 mt-3">
+            <div class="form-actions">
+              <button class="primary-button" style="width: 100%">
+                <%= f.button :submit, "Sign up", class:"primary-button" %>
+                <span aria-hidden class="primary-button__glitch"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+   <div class="col-sm-0 col-md-2 col-lg-2">
+  </div>
+
+</div>

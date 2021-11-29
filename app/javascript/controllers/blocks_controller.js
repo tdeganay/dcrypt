@@ -7,7 +7,7 @@ export default class extends Controller {
     console.log('coucou')
     // console.log(this.element);
     // console.log(this.itemsTarget);
-    console.log(this.blockTarget);
+    // console.log(this.blockTarget);
 
     fetch(this.blockTarget.dataset.fetchUrl, {
       method: 'GET',

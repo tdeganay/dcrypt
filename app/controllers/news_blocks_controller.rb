@@ -1,6 +1,9 @@
 class NewsBlocksController < ApplicationController
+  before_action :find_news_block, only: [:show, :edit, :update, :destroy]
+
+
   def index
-    @news_blocks = News_Block.all
+    @news_blocks = NewsBlock.all
   end
 
   def show
@@ -13,13 +16,13 @@ class NewsBlocksController < ApplicationController
   end
 
   def new
-    @news_block = News_Block.new
+    @news_block = NewsBlock.new
     @dashboard = Dashboard.find(params[:dashboard_id])
     authorize @news_block
   end
 
   def create
-    @news_block = News_Block.new(news_block_params)
+    @news_block = NewsBlock.new(news_block_params)
     @dashboard = Dashboard.find(params[:dashboard_id])
 
     authorize @news_block
@@ -48,6 +51,6 @@ class NewsBlocksController < ApplicationController
   end
 
   def find_news_block
-    @news_block = News_Block.find(params[:id])
+    @news_block = NewsBlock.find(params[:id])
   end
 end

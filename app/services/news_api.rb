@@ -18,8 +18,8 @@ class NewsApi
 
   def api_call
     api_token = ENV["API_KEYWORD_NEWS"]
-    # query = @news_block.user_string
-    url = "https://newsapi.org/v2/everything?q=bitcoin&from=2021-10-29&sortBy=publishedAt&apiKey=#{api_token}"
+    query = @news_block.user_string
+    url = "https://newsapi.org/v2/everything?q=#{query}&from=2021-10-29&sortBy=publishedAt&apiKey=#{api_token}"
 
     options = {
       method: 'get',
@@ -32,7 +32,6 @@ class NewsApi
 
     request = Typhoeus::Request.new(url, options)
     response = request.run
-
     return response
   end
 

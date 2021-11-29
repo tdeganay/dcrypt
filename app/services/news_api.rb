@@ -2,15 +2,16 @@ class NewsApi
 
   def initialize(news_block = nil)
     @news_block = news_block
-    # @symbol = @news_block.symbol
+
   end
 
   def call
     response = api_call
     if response.return_code == :ok
-      JSON.parse(response.response_body).dig('data').each do |article|
-        #puts article.dig('title')
-        # Article.create(news_block: @news_block, title: article.dig('title'), description: article.dig('description'))
+      JSON.parse(response.response_body).dig('articles').each do |article|
+        Article.create!(news_block: @news_block, title: article.dig('title'),author: article.dig('author'), description: article.dig('description'), url: article.dig('url'),
+                        image_url: article.dig('urlToImage'), published_at: article.dig('publishedAt'), text: article.dig('content'))
+
       end
     end
   end
@@ -18,14 +19,14 @@ class NewsApi
   def api_call
     api_token = ENV["API_KEYWORD_NEWS"]
     # query = @news_block.user_string
-    url = "https://newsapi.org/v2/everything?q=gmx&from=2021-10-29&sortBy=publishedAt&apiKey=#{api_key}"
+    url = "https://newsapi.org/v2/everything?q=bitcoin&from=2021-10-29&sortBy=publishedAt&apiKey=#{api_token}"
 
     options = {
       method: 'get',
-      headers: {
-        "User-Agent": "v2RecentSearchRuby",
+      # headers: {
+      #   "User-Agent": "v2RecentSearchRuby",
       #   "Authorization": "Bearer #{bearer_token}"
-      }
+      # }
       # params: query_params
     }
 

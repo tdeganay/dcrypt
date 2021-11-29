@@ -863,3 +863,4 @@ var SEPARATION = 100,
         count += 0.1;
 
     }
+document.querySelector(".container.main-action").nextElementSibling.firstElementChild.style.height = '700px'

@@ -1,10 +1,14 @@
 .sidebar {
   margin: 0;
-  padding: 0;
   width: fit-content;
   background-color: #161032;
   height: calc(100vh - 60px);
   overflow: auto;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar a {
@@ -50,6 +54,12 @@
     margin: 0;
     color: white !important;
   }
+  &.active {
+    background-color: $green;
+    i {
+      color: white !important;
+    }
+  }
 }
 .dashboard-content {
   flex-grow: 1;
@@ -59,3 +69,30 @@
 .dashboard-container {
   display: flex;
 }
+
+.goright {
+  color: white;
+}
+
+.sun-quote-pages{
+      border-radius: 50%;
+      background-color:$primary-blue;
+      width: 2.1em;
+      height: 2.1em;
+      border: 2px solid transparent;
+      transition: transform 0.5s ease, background 0.3s ease, box-shadow 0.5s ease;
+      text-align: center;
+      padding-top: 3px;
+    }
+
+    .sun-quote-pages:hover {
+        transform: scale(1.3);
+        border: 2px solid $green;
+        margin: 2px;
+        padding: 2px;
+    }
+
+
+    .wrapper{
+      margin-top:50px;
+    }

@@ -5,7 +5,6 @@ class DashboardsController < ApplicationController
     authorize @dashboard
     # remove comment to fetch tweet and save them in Tweets database
     # @response = FetchAndSaveTweets.new(TwitterBlock.first).call
-    @tweets = Tweet.last(2)
   end
 
   def update?

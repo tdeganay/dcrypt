@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_26_113249) do
+ActiveRecord::Schema.define(version: 2021_11_29_134146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.bigint "news_block_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.string "description"
+    t.string "author"
+    t.string "url"
+    t.string "image_url"
+    t.string "published_at"
+    t.string "text"
+    t.index ["news_block_id"], name: "index_articles_on_news_block_id"
+  end
 
   create_table "dashboards", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -30,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_11_26_113249) do
   create_table "news_blocks", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_string"
   end
 
   create_table "positions", force: :cascade do |t|
@@ -71,12 +86,13 @@ ActiveRecord::Schema.define(version: 2021_11_26_113249) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "admin"
     t.string "username"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "articles", "news_blocks"
   add_foreign_key "dashboards", "users"
   add_foreign_key "positions", "dashboards"
   add_foreign_key "tweets", "twitter_blocks"

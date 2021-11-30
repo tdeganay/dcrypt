@@ -40,10 +40,13 @@
         </div>
       <% else %>
         <div class="col-sm-12 col-md-4">
-          <%= link_to new_dashboard_twitter_block_path(@dashboard, number: number) do %>
-            <div style="background-image: url(https://imagizer.imageshack.com/img922/6926/JMUFRk.png); width: 356px; height: 356px" class="spaceholder"></div>
+          <%= render layout: "/layouts/blocks" do %>
+            <%= link_to dashboard_choose_blocks_path(@dashboard, number: number), data: {action: 'click->blocks#inject'} do %>
+              <div style="background-image: url(https://imagizer.imageshack.com/img922/6926/JMUFRk.png); width: 356px; height: 356px" class="spaceholder"></div>
+            <% end %>
           <% end %>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>

@@ -18,6 +18,10 @@ class NewsBlocksController < ApplicationController
     @news_block = NewsBlock.new
     @dashboard = Dashboard.find(params[:dashboard_id])
     authorize @news_block
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
@@ -26,7 +30,7 @@ class NewsBlocksController < ApplicationController
 
     authorize @news_block
     if @news_block.save
-      @position = Position.new(dashboard: @dashboard, block: @news_block, number: params.dig(:twitter_block, :position))
+      @position = Position.new(dashboard: @dashboard, block: @news_block, number: params.dig(:news_block, :position))
       @position.save
       redirect_to dashboard_path(@dashboard)
     else

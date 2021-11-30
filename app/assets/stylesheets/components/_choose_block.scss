@@ -1,0 +1,16 @@
+.block-links {
+  display: flex;
+  align-items: center;
+}
+
+.block-links a {
+  color: $primary-green;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 40px;
+  padding: 0px 10px;
+}
+
+.block-links a:hover {
+  opacity: 1;
+}

@@ -24,6 +24,7 @@ class MessariBlocksController < ApplicationController
     if @messari_block.save
       @position = Position.new(dashboard: @dashboard, block: @messari_block, number: params.dig(:messari_block, :position))
       @position.save
+      @response = MessariApi.new(@messari_block).create_entries
       redirect_to dashboard_path(@dashboard)
 
     else
@@ -33,7 +34,6 @@ class MessariBlocksController < ApplicationController
 
   def show
     authorize @messari_block
-    @response = MessariApi.new(@messari_block).create_entries
     respond_to do |format|
       format.html
       format.json

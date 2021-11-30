@@ -57,6 +57,7 @@
   display: flex;
   align-items: center;
   padding: 5px;
+  font-size: small;
   p {
     padding-inline: 3px;
   }
@@ -64,6 +65,8 @@
 
 .user-info {
   display: flex;
+  font-size: smaller;
+  padding-left: 10px;
 }
 
 .name {
@@ -74,6 +77,7 @@
   color: inherit;
   margin: 1px;
   font-family: $body-font;
+  font-size: small;
 }
 
 .btn.card {

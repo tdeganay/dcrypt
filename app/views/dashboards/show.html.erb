@@ -1,28 +1,3 @@
-<div class="action-bar">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
-          <i class="fak fa-add-block"></i>
-          <p>Add a Twitter block</p>
-        <% end %>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to new_dashboard_news_block_path(@dashboard) do %>
-          <i class="fak fa-add-block"></i>
-          <p>Add a News block</p>
-        <% end %>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4">
-        <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
-          <i class="fak fa-add-block"></i>
-          <p>Add a Key figures block</p>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="dashboard-container">
   <%= render partial: '/shared/sidebar' %>
   <div class="dashboard-content">
@@ -50,6 +25,8 @@
           <% case position.block_type %>
           <% when 'TwitterBlock' %>
             <%= render partial: '/shared/twitter_card', locals: {block: position.block} %>
+          <% when 'MessariBlock' %>
+            <%= render partial: '/shared/messari_card', locals: {block: position.block} %>
           <% when 'NewsBlock' %>
             <%= render partial: '/shared/news_card', locals: {block: position.block} %>
           <% end %>
@@ -71,4 +48,5 @@
     </div>
   <% end %>
 </div>
-<%= render 'shared/footer' %>
+</div>
+<%= render 'shared/actionbar' %>

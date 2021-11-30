@@ -12,7 +12,15 @@ class User < ApplicationRecord
   has_many :news_blocks, through: :dashboards
   has_many :key_figures_blocks, through: :dashboards
 
+  after_create :dash_ini
+
   def dashboard
     dashboards.first
+  end
+
+  private
+
+  def dash_ini
+    Dashboard.create(user: self)
   end
 end

@@ -18,6 +18,10 @@ class NewsBlocksController < ApplicationController
     @news_block = NewsBlock.new
     @dashboard = Dashboard.find(params[:dashboard_id])
     authorize @news_block
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create

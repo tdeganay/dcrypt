@@ -10,16 +10,19 @@ class MessariBlocksController < ApplicationController
     @messari_block = MessariBlock.new
     @dashboard = Dashboard.find(params[:dashboard_id])
     authorize @messari_block
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
-
     @messari_block = MessariBlock.new(messari_block_params)
     @dashboard = Dashboard.find(params[:dashboard_id])
 
     authorize @messari_block
     if @messari_block.save
-      @position = Position.new(dashboard: @dashboard, block: @messari_block, number: params.dig(:messari_block, :position ))
+      @position = Position.new(dashboard: @dashboard, block: @messari_block, number: params.dig(:messari_block, :position))
       @position.save
       redirect_to dashboard_path(@dashboard)
 

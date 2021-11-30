@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ['block'];
+  static targets = ['block', 'layout'];
 
   connect() {
     console.log('coucou')
@@ -20,5 +20,22 @@ export default class extends Controller {
       });
 
     // add interval
+  }
+
+  inject(event) {
+    event.preventDefault()
+    console.log(this)
+    console.log('hello')
+    console.log(event)
+    console.log(event.currentTarget.href)
+    fetch(event.currentTarget.href, {
+      method: 'GET',
+      headers: { 'Accept': "application/json" }
+    })
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data)
+        this.layoutTarget.innerHTML = data.data;
+      });
   }
 }

@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center">
+  <div class="block-links">
+    <%= link_to new_dashboard_twitter_block_path(@dashboard) do %>
+      <i class="fab fa-twitter-square"></i>
+    <% end %>
+
+    <%= link_to new_dashboard_news_block_path(@dashboard) do %>
+      <i class="fal fa-newspaper"></i>
+    <% end %>
+
+    <%= link_to new_dashboard_messari_block_path(@dashboard) do %>
+      <i class="fas fa-chart-line"></i>
+    <% end %>
+  </div>
+</div>

@@ -1,9 +1,7 @@
 .blocks-card {
   background-color: white;
   text-align: center;
-  padding: 20px 0;
   border-radius: 7px;
-  margin: 20px;
   display: grid;
   grid: 1fr;
   height: 356px;
@@ -11,12 +9,12 @@
   box-shadow: rgba(147, 149, 175, 0.25) 0 6px 24px 0;
   position: relative;
   transition: box-shadow 0.2s;
+  padding: 20px;
+  margin: 12px 0px;
 }
 
 .blocks-card:hover {
   box-shadow: rgba(147, 149, 175, 0.85) 0 6px 24px 0;
-  height: 368px;
-  width: 368px;
 }
 
 .far.fa-trash-alt {
@@ -40,4 +38,9 @@
 
 .block-title {
   font-weight: 700;
+}
+.spaceholder {
+  margin: 12px 0px;
+  width: 356px;
+  height: 356px;
 }

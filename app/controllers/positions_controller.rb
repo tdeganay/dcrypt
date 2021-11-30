@@ -8,4 +8,5 @@ class PositionsController < ApplicationController
     @position.destroy
     redirect_to dashboard_path(@dashboard)
   end
+
 end

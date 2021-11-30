@@ -2,7 +2,6 @@
 <script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery/2.2.3/jquery.min.js"></script>
 
-
 <div class="blue-background row d-flex align-items-center">
       <div class="col-sm-12 col-md-4 col-lg-4">
         <div class="container p-5">
@@ -16,8 +15,6 @@
             <%= f.input :user_string, label: "Which coin are you looking for?", class:"form-control", input_html: { data: { search_crypto_target: "searchInput"}} %>
             <%= f.button :submit, "Add a chart block", class:"primary-button mt-2" %>
           <% end %>
-          <form novalidate="novalidate" onsubmit="return false;" class="searchbox">
-              <div role="search" class="searchbox__wrapper">
 
                 <button type="submit" title="Submit your search query." class="searchbox__submit" >
                 <svg role="img" aria-label="Search">

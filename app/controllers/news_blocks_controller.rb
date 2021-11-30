@@ -1,7 +1,6 @@
 class NewsBlocksController < ApplicationController
   before_action :find_news_block, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @news_blocks = NewsBlock.all
   end
@@ -27,7 +26,7 @@ class NewsBlocksController < ApplicationController
 
     authorize @news_block
     if @news_block.save
-      @position = Position.new(dashboard: @dashboard, block: @news_block)
+      @position = Position.new(dashboard: @dashboard, block: @news_block, number: params.dig(:twitter_block, :position))
       @position.save
       redirect_to dashboard_path(@dashboard)
     else

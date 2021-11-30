@@ -1,0 +1,19 @@
+.news-info {
+  display: flex;
+  font-size: x-small;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.news-url a {
+  font-size: smaller;
+  color: #06D6A0;
+  font-weight: bold;
+}
+
+.news-text {
+  color: inherit;
+  margin: 1px;
+  font-family: $body-font;
+  font-size: smaller;
+}

@@ -1,7 +1,7 @@
 <div id="mySidebar" class="sidebar" data-controller="sidebar" >
   <div class="sidebar-links">
 
-    <%= link_to "#", class: "sidebar-icon #{"active" if params[:action] == "show" }", remote: true do %>
+    <%= link_to dashboard_path(current_user.dashboard), class: "sidebar-icon #{"active" if params[:action] == "show" }" do %>
         <i class="fas fa-cubes"></i> <p class="d-none"  data-sidebar-target="sidebar">Blocks</p>
       <% end %>
     <%= link_to "#", class: "sidebar-icon", remote: true do %>

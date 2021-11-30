@@ -16,7 +16,7 @@ class TwitterBlocksController < ApplicationController
     @dashboard = Dashboard.find(params[:dashboard_id])
     authorize @twitter_block
     if @twitter_block.save
-      @position = Position.new(dashboard: @dashboard, block: @twitter_block)
+      @position = Position.new(dashboard: @dashboard, block: @twitter_block, number: params.dig(:twitter_block, :position))
       @position.save
       redirect_to dashboard_path(@dashboard)
     else

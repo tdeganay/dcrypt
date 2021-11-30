@@ -9,6 +9,10 @@ class TwitterBlocksController < ApplicationController
     @twitter_block = TwitterBlock.new
     @dashboard = Dashboard.find(params[:dashboard_id])
     authorize @twitter_block
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create

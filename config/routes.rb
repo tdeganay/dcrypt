@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   resources :dashboards, only: [:show, :new, :create] do
+    member do
+      patch :move
+    end
     resources :twitter_blocks, shallow: true, except: :index
     resources :news_blocks, shallow: true, except: :index
     resources :key_figures_blocks, shallow: true, except: :index
     resources :messari_blocks, shallow: true, except: :index
+    get "choose_blocks", to: "blocks#choose_block"
   end
 
   resources :positions, only: [:edit, :update, :destroy]

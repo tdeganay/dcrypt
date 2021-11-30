@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :twitter_blocks, shallow: true, except: :index
     resources :news_blocks, shallow: true, except: :index
     resources :key_figures_blocks, shallow: true, except: :index
+    resources :messari_blocks, shallow: true, except: :index
   end
 
   resources :positions, only: [:edit, :update, :destroy]

@@ -25,6 +25,8 @@
           <% case position.block_type %>
           <% when 'TwitterBlock' %>
             <%= render partial: '/shared/twitter_card', locals: {block: position.block} %>
+          <% when 'MessariBlock' %>
+            <%= render partial: '/shared/messari_card', locals: {block: position.block} %>
           <% when 'NewsBlock' %>
             <%= render partial: '/shared/news_card', locals: {block: position.block} %>
           <% end %>

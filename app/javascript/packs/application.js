@@ -18,4 +18,4 @@ require("scripts/three.js")
 
 import "controllers"
 import "bootstrap"
-// import "chartkick/chart.js"
+import "chartkick/chart.js"

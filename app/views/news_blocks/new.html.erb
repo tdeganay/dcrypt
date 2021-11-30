@@ -8,6 +8,7 @@
           </a>
           <h3 style="color: white;" class="mb-5">Add a News block to my Dashboard</h1>>
           <%= simple_form_for([@dashboard, @news_block]) do |f| %>
+            <%= f.hidden_field :position, value: params[:number] %>
             <%= f.input :user_string, label: "Please input what you are looking for", class:"form-control", id:"querry" %>
             <%= f.button :submit, "Add a News block", class:"primary-button mt-2" %>
           <% end %>

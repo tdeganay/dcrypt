@@ -20,9 +20,9 @@ class DashboardsController < ApplicationController
   # end
 
   def move
-    binding.pry
-    @dashboard.insert_at(params[:position].to_i)
-    head :ok
+    # binding.pry
+    # @dashboard.insert_at(params[:position].to_i)
+    # head :ok
   end
 
 end

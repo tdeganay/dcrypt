@@ -35,7 +35,6 @@ class MessariApi
     time_data
   end
 
-
   def create_entries
     top_graph.each do |key, value|
       Plotable.create!(value: value, current_date: key, messari_block: @messari_block)

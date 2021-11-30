@@ -19,7 +19,7 @@ class MessariBlocksController < ApplicationController
 
     authorize @messari_block
     if @messari_block.save
-      @position = Position.new(dashboard: @dashboard, block: @messari_block, number: params.dig(:twitter_block, :position))
+      @position = Position.new(dashboard: @dashboard, block: @messari_block, number: params.dig(:messari_block, :position ))
       @position.save
       redirect_to dashboard_path(@dashboard)
 

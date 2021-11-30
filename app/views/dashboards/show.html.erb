@@ -13,6 +13,8 @@
       <i class="fas fa-pen-square"></i>
       <% end %>
     <% end %>
+
+   <div data-controller="polymorph" data-polymorph-url="<%= move_dashboard_path(@dashboard)%>"class="d-flex">
     <% 1.upto(6).each do |number| %>
       <% position = @dashboard.positions.find_by(number: number) %>
       <% if position %>
@@ -34,17 +36,16 @@
                 <%= render partial: '/shared/news_card', locals: {block: position.block} %>
               <% end %>
           <% end %>
+          </div>
         </div>
-
       <% else %>
-
         <div class="col-sm-12 col-md-4">
           <%= link_to new_dashboard_twitter_block_path(@dashboard, number: number) do %>
             <div style="background-image: url(https://imagizer.imageshack.com/img922/6926/JMUFRk.png); width: 356px; height: 356px" class="spaceholder"></div>
           <% end %>
         </div>
       <% end %>
-    <% end %>
+    </div>
   </div>
   <% else %>
     <div class="row d-flex align-items-center mt-5">

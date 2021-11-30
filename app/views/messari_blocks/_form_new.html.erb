@@ -1,6 +1,4 @@
-<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-<script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery/2.2.3/jquery.min.js"></script>
+
 
 <%= simple_form_for([@dashboard, @messari_block], html: { class: "searchbox", data: {controller: "search-crypto"}}) do |f| %>
   <div role="search" class="searchbox__wrapper">
@@ -10,3 +8,4 @@
                 autocomplete:"on", required:"required", placeholder:"Search for a crypto currency", id:"search-input"%>
     <%= f.button :submit, "Add trend block", class:"primary-button searchbox__submit mt-2"%>
   </div>
+<% end %>

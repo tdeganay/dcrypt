@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/be2ee351bd.js" crossorigin="anonymous"></script>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body class= "<%= "home" if params[:action] == "home" %>">

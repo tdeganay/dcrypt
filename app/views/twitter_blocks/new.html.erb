@@ -9,6 +9,7 @@
           <h1 style="color: white;" class="mb-5">Add a new Twitter block to my Dashboard</h1>
           <h3 style="color: white !important;" class="mb-5">Follow your favorites feeds to know your next move</h3>
           <%= simple_form_for([@dashboard, @twitter_block]) do |f| %>
+            <%= f.hidden_field :position, value: params[:number] %>
             <%= f.input :user_string, label: "Please input what you are looking for", class:"form-control" %>
             <%= f.button :submit, "Add a Twitter block", class:"primary-button mt-2" %>
           <% end %>

@@ -26,7 +26,7 @@ class NewsBlocksController < ApplicationController
 
     authorize @news_block
     if @news_block.save
-      @position = Position.new(dashboard: @dashboard, block: @news_block)
+      @position = Position.new(dashboard: @dashboard, block: @news_block, number: params.dig(:twitter_block, :position))
       @position.save
       redirect_to dashboard_path(@dashboard)
     else

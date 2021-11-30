@@ -2,25 +2,23 @@
   <%= "Fetching news, have a coffee" if block.articles.empty? %>
   <% block.articles.each do |article| %>
     <div class="container twitter-card">
-      <div class="tweet-info">
-        <div class="user-data">
-          <img class="tweet-avatar" src="<%= article.author %>"  alt="avatar">
-          <div class="user-info">
-            <p> <%= article.published_at %> <%= article.title %> </p>
-          </div>
-        </div>
-        <div class="date">
-          <p><%= article.created_at  %></p>
+      <div class="news-title">
+        <p><strong><%= article.title %></strong></p>
+      </div>
+      <div class="news-info">
+        <p><%= article.author %></p>
+        <div class="news-date">
+          <p><%= article.published_at.split('T').first  %></p>
         </div>
       </div>
-      <div class="tweet-text">
+      <div class="news-text">
         <p><%= article.description %></p>
-      </div>
-      <div class="tweet-text">
-        <p><%= article.url %></p>
-      </div>
-      <div class="tweet-text">
         <p><%= article.text %></p>
+      </div>
+      <div class="news-url">
+        <%= link_to article.url do  %>
+        Read the full article here <i class="fas fa-link"></i>
+        <% end %>
       </div>
     </div>
   <% end %>

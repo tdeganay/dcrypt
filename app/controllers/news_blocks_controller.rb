@@ -1,7 +1,6 @@
 class NewsBlocksController < ApplicationController
   before_action :find_news_block, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @news_blocks = NewsBlock.all
   end

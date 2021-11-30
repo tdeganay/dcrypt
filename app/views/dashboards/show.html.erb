@@ -13,25 +13,27 @@
       <i class="fas fa-pen-square"></i>
       <% end %>
     <% end %>
-    <% @dashboard.positions.each do |position| %>
-      <%= render layout: "/layouts/blocks" do %>
-        <div class="flexer">
-          <span class="block-title"><%= position.block_type.underscore.capitalize %></span>
-          <span class="search-tag">#<%= position.block.user_string %></span>
-          <%= link_to position_path(position), method: :delete do %>
-            <i class="far fa-trash-alt"></i>
-          <% end %>
-        </div>
-          <% case position.block_type %>
-          <% when 'TwitterBlock' %>
-            <%= render partial: '/shared/twitter_card', locals: {block: position.block} %>
-          <% when 'MessariBlock' %>
-            <%= render partial: '/shared/messari_card', locals: {block: position.block} %>
-          <% when 'NewsBlock' %>
-            <%= render partial: '/shared/news_card', locals: {block: position.block} %>
-          <% end %>
+    <div data-controller="polymorph" data-drag-url = "/dashboards/:id/move">
+      <% @dashboard.positions.each do |position| %>
+        <%= render layout: "/layouts/blocks" do %>
+          <div class="flexer">
+            <span class="block-title"><%= position.block_type.underscore.capitalize %></span>
+            <span class="search-tag">#<%= position.block.user_string %></span>
+            <%= link_to position_path(position), method: :delete do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+          </div>
+            <% case position.block_type %>
+            <% when 'TwitterBlock' %>
+              <%= render partial: '/shared/twitter_card', locals: {block: position.block} %>
+            <% when 'MessariBlock' %>
+              <%= render partial: '/shared/messari_card', locals: {block: position.block} %>
+            <% when 'NewsBlock' %>
+              <%= render partial: '/shared/news_card', locals: {block: position.block} %>
+            <% end %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
   <% else %>
     <div class="row d-flex align-items-center mt-5">

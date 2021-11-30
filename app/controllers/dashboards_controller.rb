@@ -19,5 +19,9 @@ class DashboardsController < ApplicationController
   #   record.user == user
   # end
 
+  def move
+    @dashboard.insert_at(params[:position].to_i)
+    head :ok
+  end
 
 end

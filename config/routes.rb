@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :dashboards, only: [:show, :new, :create] do
+  resources :dashboards, only: [:show, :new, :create, :move] do
+
     resources :twitter_blocks, shallow: true, except: :index
     resources :news_blocks, shallow: true, except: :index
     resources :key_figures_blocks, shallow: true, except: :index

@@ -5,40 +5,12 @@
 <div class="dashboard-container">
   <%= render partial: '/shared/sidebar' %>
   <div class="dashboard-content">
-
-<div class="container" style="margin-top: 104px">
-  <h1>My dashboard</h1>
-
-  <% if @dashboard.positions.any? %>
-
-  <div class="row d-flex justify-content-between">
-    <% if policy(@dashboard).edit? %>
-      <%= link_to edit_dashboard_path(@dashboard) do %>
-      <i class="fas fa-pen-square"></i>
-      <% end %>
-    <% end %>
-
-   <div data-controller="polymorph" data-polymorph-url="<%= move_dashboard_path(@dashboard)%>"class="d-flex">
-    <% 1.upto(6).each do |number| %>
-      <% position = @dashboard.positions.find_by(number: number) %>
-      <% if position %>
-        <div class="col-sm-12 col-md-4">
-          <%= render layout: "/layouts/blocks" do %>
-            <div class="flexer">
-              <span class="block-title"><%= position.block_type.underscore.capitalize %></span>
-              <span class="search-tag">#<%= position.block.user_string %></span>
-              <%= link_to position_path(position), method: :delete do %>
-                <i class="far fa-trash-alt"></i>
-              <% end %>
-            </div>
-              <% case position.block_type %>
-              <% when 'TwitterBlock' %>
-                <%= render partial: '/shared/twitter_card', locals: {block: position.block} %>
-              <% when 'MessariBlock' %>
-                <%= render partial: '/shared/messari_card', locals: {block: position.block} %>
-              <% when 'NewsBlock' %>
-                <%= render partial: '/shared/news_card', locals: {block: position.block} %>
-              <% end %>
+    <div class="container" style="margin-top: 104px">
+      <h1>My dashboard</h1>
+      <div class="row d-flex justify-content-between">
+        <% if policy(@dashboard).edit? %>
+          <%= link_to edit_dashboard_path(@dashboard) do %>
+          <i class="fas fa-pen-square"></i>
           <% end %>
           </div>
         </div>
@@ -67,6 +39,5 @@
         <p>Add some blocks to fill your dashboard.</p>
       </div>
     </div>
-  <% end %>
-</div>
+  </div>
 </div>

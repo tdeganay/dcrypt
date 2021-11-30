@@ -1,5 +1,6 @@
 import { Controller } from "stimulus";
 import Sortable from "sortablejs";
+import { csrfToken } from "@rails/ujs";
 
 export default class extends Controller {
 
@@ -10,14 +11,16 @@ export default class extends Controller {
     })
   }
   end(event) {
+    console.log(event)
+    // retrouver touts les id des potions en db
     let id = event.item.dataset.id
     let data = new FormData()
     data.append("position", event.newIndex + 1)
-
-    Rails.ajax({
-      url: this.data.get("url").remplace(":id", id),
-      type: 'PATCH',
-      data: data
+    console.log(this.data.get("url"))
+    fetch(this.data.get("url"),{
+      method: 'PATCH',
+      data: data,
+      headers:  {"X-CSRF-Token": csrfToken()},
     })
   }
 }

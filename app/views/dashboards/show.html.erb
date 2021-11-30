@@ -13,7 +13,7 @@
       <i class="fas fa-pen-square"></i>
       <% end %>
     <% end %>
-    <div data-controller="polymorph" data-drag-url = "/dashboards/:id/move">
+    <div data-controller="polymorph" data-polymorph-url="<%= move_dashboard_path(@dashboard)%>"class="d-flex">
       <% @dashboard.positions.each do |position| %>
         <%= render layout: "/layouts/blocks" do %>
           <div class="flexer">

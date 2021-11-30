@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_155526) do
     t.bigint "dashboard_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "number"
     t.index ["block_type", "block_id"], name: "index_positions_on_block_type_and_block_id"
     t.index ["dashboard_id"], name: "index_positions_on_dashboard_id"
   end

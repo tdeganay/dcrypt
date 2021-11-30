@@ -24,7 +24,7 @@ class MessariApi
       data = JSON.parse(res.body)["data"]["values"].map { |value| value[4] }
       time_data = data.map do |value|
         current_date += 1
-        [current_date, value]
+        [current_date, value.fdiv(1000)]
       end.to_h
 
     else

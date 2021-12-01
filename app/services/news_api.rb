@@ -10,7 +10,7 @@ class NewsApi
     if response.return_code == :ok
       JSON.parse(response.response_body).dig('articles').each do |article|
         Article.create!(news_block: @news_block, title: article.dig('title'),author: article.dig('author'), description: article.dig('description'), url: article.dig('url'),
-                        image_url: article.dig('urlToImage'), published_at: article.dig('publishedAt').strftime('%m/%d/%Y'), text: article.dig('content'))
+                        image_url: article.dig('urlToImage'), published_at: article.dig('publishedAt'), text: article.dig('content'))
 
       end
     end

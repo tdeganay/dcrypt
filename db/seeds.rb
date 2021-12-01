@@ -8,11 +8,11 @@
 
 puts "creating test user"
 
-User.create!(email: "test@test.fr", password: 123456, username: "test", admin: false)
+User.create!(email: "test@test.fr", password: 123456, admin: false)
 
 puts "creating admin user"
 
-User.create!(email: "admin@admin.fr", password: 123456, username: "admin", admin: true)
+User.create!(email: "admin@admin.fr", password: 123456, admin: true)
 
 puts "creating test and admin dashboards"
 

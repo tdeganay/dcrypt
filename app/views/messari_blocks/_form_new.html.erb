@@ -1,12 +1,9 @@
-<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-<script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery/2.2.3/jquery.min.js"></script>
-
-<%= simple_form_for([@dashboard, @messari_block], html: { class: "searchbox", data: {controller: "search-crypto"}}) do |f| %>
-  <div role="search" class="searchbox__wrapper">
-    <%= f.hidden_field :position, value: params[:number] %>
-    <%= f.input :user_string, label: "Please input the ticker of the crypto you are looking for",
-                class:"form-control searchbox__input", input_html: { data: { search_crypto_target: "searchInput"}},
-                autocomplete:"on", required:"required", placeholder:"Search for a crypto currency", id:"search-input"%>
-    <%= f.button :submit, "Add trend block", class:"primary-button searchbox__submit mt-2"%>
+<div class="new-background">
+  <div class="new-form-margin">
+    <%= simple_form_for([@dashboard, @messari_block], html: { class: "searchbox", data: {controller: "search-crypto"}}) do |f| %>
+      <%= f.hidden_field :position, value: params[:number] %>
+      <%= f.input :user_string, label: "Please input a search tag", :input_html => { data: { search_crypto_target: "searchInput"}, class: 'form-dark'} %>
+      <%= f.button :submit, "Add a trend block", class:"primary-button mt-2" %>
+    <% end %>
   </div>
+</div>

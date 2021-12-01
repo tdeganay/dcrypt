@@ -1,5 +1,5 @@
 <%= simple_form_for([@dashboard, @twitter_block]) do |f| %>
   <%= f.hidden_field :position, value: params[:number] %>
-  <%= f.input :user_string, label: "Please input what you are looking for", class:"form-control"%>
+  <%= f.input :user_string, label: "Please input what you are looking for", class:"form-dark"%>
   <%= f.button :submit, "Add Twitter block", class:"primary-button mt-2" %>
 <% end %>

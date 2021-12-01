@@ -1,11 +1,9 @@
 .searchbox {
-  position: relative;
-  display: flex;
   width: 380px;
   height: 37px;
   white-space: nowrap;
   box-sizing: border-box;
-  font-size: 13px;
+  font-size: 16px;
   font-family: $body-font;
   .algolia-autocomplete {
     width: 100%;

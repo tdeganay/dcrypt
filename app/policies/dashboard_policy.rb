@@ -14,7 +14,7 @@ class DashboardPolicy < ApplicationPolicy
     # user.admin == true
   end
 
-  def move
+  def move?
     record.user == user
     # user.admin == true
   end

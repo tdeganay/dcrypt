@@ -14,7 +14,7 @@ class MessariApi
   end
 
 
-  def top_graph(start_date = "2021-01-01", end_date = "2021-11-30")
+  def top_graph(start_date = "2021-10-01", end_date = "2021-11-30")
     start_date = Date.parse(start_date)
     # end_date = Date.parse(end_date)
     current_date = start_date - 1

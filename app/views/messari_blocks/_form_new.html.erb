@@ -1,4 +1,4 @@
-<div class="new-background" data-controller="search_crypto">
+<div class="new-background">
   <div class="new-form-margin">
     <%= simple_form_for([@dashboard, @messari_block], html: { class: "searchbox", data: {controller: "search-crypto"}}) do |f| %>
       <%= f.hidden_field :position, value: params[:number] %>

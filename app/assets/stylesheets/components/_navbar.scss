@@ -1,19 +1,39 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
   z-index: 2;
   width: 100%;
   position: fixed;
 }
-.home .navbar-lewagon {
-  justify-content: space-between;
-  background: transparent;
-  z-index: 2;
-  position: fixed;
-  filter: brightness(0) invert(1);
+.midnightHeader.default {
+  background-color: white;
+  color: $primary-blue;
 }
-#avatar-invert {
-  filter: brightness(1) invert(0) !important;
+.midnightHeader.transparent {
+  background: transparent;
+  .nav-item a{
+    color: white !important;
+  }
+  .dlogo {
+  filter: brightness(0) invert(1);
+  }
+}
+.midnightInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.transparent-navbar {
+  justify-content: space-between;
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+}
+.white-navbar {
+  background-color: white;
+}
+.white-navbar img {
+  filter: brightness(0) invert(1);
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;

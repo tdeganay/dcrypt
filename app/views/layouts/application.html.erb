@@ -13,11 +13,19 @@
     <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
-  <body class= "<%= "home" if params[:action] == "home" %>">
+  <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <script src="https://kit.fontawesome.com/be2ee351bd.js" crossorigin="anonymous"></script>
     <script src="https://github.com/mrdoob/three.js"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@1.11,npm/midnight.js@1.1"></script>
+    <script src="//cdn.jsdelivr.net/npm/midnight.js@1.1/dist/midnight.jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Change this to the correct selector for your nav.
+        $('.navbar').midnight();
+      });
+    </script>
   </body>
 </html>

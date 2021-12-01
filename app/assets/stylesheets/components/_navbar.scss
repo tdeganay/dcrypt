@@ -7,11 +7,16 @@
 .midnightHeader.default {
   background-color: white;
   color: $primary-blue;
+  .nav-link{
+    color: $primary-blue;
+    border: solid 2px $primary-blue;
+  }
 }
 .midnightHeader.transparent {
   background: transparent;
-  .nav-item a{
+  .nav-link{
     color: white !important;
+    border: solid 2px white;
   }
   .dlogo {
   filter: brightness(0) invert(1);
@@ -49,4 +54,10 @@
 }
 .navbar-brand {
   font-family: "Vox-Bold";
+}
+.nav-link {
+  padding: 8px 16px;
+  border: solid 2px white;
+  border-radius: 48px;
+  margin-right: 20px;
 }

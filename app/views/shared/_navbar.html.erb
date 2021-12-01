@@ -1,13 +1,12 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container">
-    <%= link_to root_path, class: "navbar-brand" do %>
+  <div class="container d-flex justify-content-between p-2">
+    <%= link_to root_path, class: "navbar-brand dlogo" do %>
       <%= image_tag "logo-couleur.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>

@@ -32,6 +32,7 @@ class NewsBlocksController < ApplicationController
     if @news_block.save
       @position = Position.new(dashboard: @dashboard, block: @news_block, number: params.dig(:news_block, :position))
       @position.save
+      NewsApi.new(@news_block).call
       redirect_to dashboard_path(@dashboard)
     else
       render :new

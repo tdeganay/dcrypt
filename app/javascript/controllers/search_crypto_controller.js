@@ -1,9 +1,13 @@
 import { Controller } from "stimulus"
+// import "autocomplete"
+// import "jquery"
+// import { autocomplete } from '@algolia/autocomplete-js';
 
 export default class extends Controller {
     static targets = ['searchInput'];
 
   connect() {
+    // const algoliasearch = require("algoliasearch");
     console.log("hello", this.searchInputTarget)
     var client = algoliasearch("T2ZX9HO66V", "7119d2f6f1cd95224251ec2e490e824f")
       var index = client.initIndex('growth_zapier_coinmarketcap');

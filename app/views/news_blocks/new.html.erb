@@ -1,16 +1,19 @@
-<div class="blue-background row d-flex align-items-center block-placeholder">
-      <div class="col-12">
+<div class="blue-background row d-flex align-items-center">
+      <div class="col-sm-12 col-md-4 col-lg-4">
         <div class="container p-5">
           <p style="color: white !important;" class="back-link">
             <i class="far fa-arrow-left"></i>
-            <%= link_to 'Back to previous page', :back %>
+            <%= link_to 'Back to the dashboard', :back %>
           </p>
           </a>
-          <h3 style="color: white;" class="mb-5">Add a News block to my Dashboard</h1>>
-          <%= simple_form_for([@dashboard, @news_block]) html: { class: "searchbox", data: {controller: "search-crypto"}} do |f| %>
-            <%= f.hidden_field :position, value: params[:number] %>
+          <h1 style="color: white;" class="mb-5">Add a new News block to my Dashboard</h1>
+          <h3 style="color: white !important;" class="mb-5">Follow your favorites feeds to know your next move</h3>
+          <%= simple_form_for([@dashboard, @news_block]) do |f| %>
             <%= f.input :user_string, label: "Please input what you are looking for", class:"form-control", id:"querry" %>
             <%= f.button :submit, "Add a News block", class:"primary-button mt-2" %>
           <% end %>
         </div>
+      </div>
+      <div class="col-sm-12 col-md-8 col-lg-8 new-image">
+      </div>
 </div>

@@ -18,7 +18,7 @@
           <div class="col-sm-12 col-md-4" data-polymorph-target='block' data-position="<%= number %>" data-position-id="<%= position.id %>">
             <%= render layout: "/layouts/blocks" do %>
               <div class="flexer">
-                <span class="block-title"><%= position.block_type.underscore.capitalize %></span>
+                <span class="block-title"><%= position.block_type.underscore.capitalize == "Messari_Block" ? "Trend_Block" : position.block_type.underscore.capitalize %></span>
                 <span class="search-tag">#<%= position.block.user_string %></span>
                 <%= link_to position_path(position), method: :delete do %>
                   <i class="far fa-trash-alt"></i>

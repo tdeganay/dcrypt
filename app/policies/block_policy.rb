@@ -1,4 +1,4 @@
-class ChooseBlockPolicy < ApplicationPolicy
+class BlockPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all

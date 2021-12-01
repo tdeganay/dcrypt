@@ -9,7 +9,21 @@
   box-shadow: rgba(147, 149, 175, 0.25) 0 6px 24px 0;
   position: relative;
   transition: box-shadow 0.2s;
-  padding: 20px;
+  padding: 12px;
+  margin: 12px 0px;
+}
+.empty-block-card {
+  background-image: url(https://imagizer.imageshack.com/img923/7540/nCq6p6.png);
+  text-align: center;
+  border-radius: 7px;
+  display: grid;
+  grid: 1fr;
+  height: 356px;
+  width: 356px;
+  box-shadow: rgba(147, 149, 175, 0.25) 0 6px 24px 0;
+  position: relative;
+  transition: box-shadow 0.2s;
+  padding: 12px;
   margin: 12px 0px;
 }
 
@@ -43,4 +57,8 @@
   margin: 12px 0px;
   width: 356px;
   height: 356px;
+}
+
+.new-background {
+  background-color: #f4f4f4 !important;
 }

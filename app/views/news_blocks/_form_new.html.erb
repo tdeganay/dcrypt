@@ -1,5 +1,9 @@
-<%= simple_form_for([@dashboard, @news_block]) do |f| %>
-  <%= f.hidden_field :position, value: params[:number] %>
-  <%= f.input :user_string, label: "Please input what you are looking for", class:"form-control", id:"querry" %>
-  <%= f.button :submit, "Add News block", class:"primary-button mt-2" %>
-<% end %>
+<div class="new-background">
+  <div class="new-form-margin">
+    <%= simple_form_for([@dashboard, @news_block]) do |f| %>
+      <%= f.hidden_field :position, value: params[:number] %>
+      <%= f.input :user_string, label: "Please input a search tag", :input_html => {class: 'form-dark', autocomplete: 'off'} %>
+      <%= f.button :submit, "Add News block", class:"primary-button mt-2" %>
+    <% end %>
+  </div>
+</div>

@@ -25,4 +25,11 @@
   border-radius: 8px;
   // background-color: $primary-blue !important;
   border: solid 2px $primary-blue !important;
+  color: $primary-blue !important;
+}
+.form-dark:focus {
+  color: $primary-blue !important;
+}
+.new-form-margin {
+  margin-top: 72px;
 }

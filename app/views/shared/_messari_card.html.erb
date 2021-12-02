@@ -1,5 +1,5 @@
 <div class="tw-card-scroller" data-blocks-target="block" data-fetch-url=<%= messari_block_path(block) %> >
   <%#= "Fetching plotables, have a coffee" if block.plotables.empty? %>
  <%#= block.plotables.last.current_date %>
-    <%= area_chart MessariApi.new(block).top_graph, width: "340px", height: "262px", colors: ["#1EDD88", "#85e4b9"], suffix: "k$", round: 1%>
+  <%= area_chart MessariApi.new(block).top_graph, width: "340px", height: "262px", colors: ["#1EDD88", "#85e4b9"], suffix: "k$", round: 1 %>
 </div>

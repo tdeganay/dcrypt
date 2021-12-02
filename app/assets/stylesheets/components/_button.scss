@@ -102,16 +102,20 @@
   border-radius: 48px;
   text-align: center;
   text-decoration: none;
-  text-shadow: 1px 1px 3px rgba(63,107,169, 0.5)
+  text-shadow: 1px 1px 3px rgba(63,107,169, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 235, 184, 0.4);
 }
 
 .primary-button:hover {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
   color: white;
+  box-shadow: 0 5px 15px rgba(0, 235, 184, 0.4);
+  transition-duration: 300ms;
 }
 .primary-button:active {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
   color: white;
+  transition-duration: 300ms;
 }
 
 .primary-button:after,

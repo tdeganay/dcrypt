@@ -10,8 +10,23 @@
   text-decoration: none;
   font-size: 40px;
   padding: 0px 10px;
+
 }
 
 .block-links a:hover {
   opacity: 1;
+  p{
+    visibility: visible;
+  }
+}
+
+.block-links p{
+  visibility: hidden;
+  color: $primary-green;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  width: 100%;
 }

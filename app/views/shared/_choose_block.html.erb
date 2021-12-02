@@ -2,14 +2,17 @@
   <div class="block-links">
     <%= link_to new_dashboard_twitter_block_path(@dashboard, number: @position), data: {action: 'click->blocks#inject'} do %>
       <i class="fab fa-twitter-square"></i>
+      <p> Get last tweets 🗣</p>
     <% end %>
 
     <%= link_to new_dashboard_news_block_path(@dashboard, number: @position), data: {action: 'click->blocks#inject'} do %>
       <i class="fal fa-newspaper"></i>
+      <p> Get hot news 🗞</p>
     <% end %>
 
     <%= link_to new_dashboard_messari_block_path(@dashboard, number: @position), data: {action: 'click->blocks#inject'} do %>
       <i class="fas fa-chart-line"></i>
+      <p> Get juicy charts 📊</p>
     <% end %>
   </div>
 </div>

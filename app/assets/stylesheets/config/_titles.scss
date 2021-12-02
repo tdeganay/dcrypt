@@ -39,6 +39,24 @@ p {
 .signup-label {
   color: white;
 }
-#title {
-  font-size: 88px !important;
+#title h1{
+  font-size: 72px !important;
+}
+.gradient {
+	background: -webkit-linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

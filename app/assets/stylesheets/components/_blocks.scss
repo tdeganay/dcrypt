@@ -20,7 +20,6 @@
   grid: 1fr;
   height: 356px;
   width: 356px;
-  box-shadow: rgba(147, 149, 175, 0.25) 0 6px 24px 0;
   position: relative;
   transition: box-shadow 0.2s;
   padding: 12px;
@@ -32,15 +31,17 @@
 }
 
 .far.fa-trash-alt {
-  color: black !important;
+  color: $primary-blue !important;
   font-size: 20px;
 }
 
 .flexer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  padding: 0px 18px;
+  color: $primary-blue;
 }
 
 .search-tag {

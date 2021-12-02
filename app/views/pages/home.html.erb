@@ -4,18 +4,13 @@
 <div class="animated_banner" data-controller="banner" style="background: rgb(62,54,98);
 background: linear-gradient(180deg, rgba(62,54,98,1) 0%, rgba(22,16,50,1) 100%);" data-midnight="transparent">
   <div class="container main-action">
-    <div id="title" style="color: white;" class="mb-4">
-      <h1>Update <span style="text-decoration: line-through;">your knowledge</span></h1>
-      <h1>yourself</h1>
+    <div id="title" style="color: white;" class="mb-4 row">
+      <div class="col-6">
+        <h1>Enlarge your knowledge from <del>Crypto Boy</del></h1>
+        <h1 class="gradient">to Crypto Lord</h1>
+      </div>
     </div>
     <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-6">
-        <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "search a block..."
-        %>
-      </div>
       <div class="col-sm-12 col-md-4 col-lg-4">
         <button class="primary-button">
           <%= link_to new_user_session_path, class: "primary-button" do %>

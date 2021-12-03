@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_093416) do
+ActiveRecord::Schema.define(version: 2021_12_02_155858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 2021_11_30_093416) do
   create_table "key_figures_blocks", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "symbol"
+    t.string "name"
+    t.integer "rank_market_cap"
+    t.float "price_usd"
+    t.float "all_time_high"
+    t.float "price_btc"
+    t.float "price_eth"
+    t.float "market_dominance"
+    t.date "date_time"
+    t.string "user_string"
   end
 
   create_table "messari_blocks", force: :cascade do |t|

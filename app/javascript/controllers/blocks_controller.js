@@ -9,17 +9,17 @@ export default class extends Controller {
     // console.log(this.itemsTarget);
     // console.log(this.blockTarget);
 
-    // if (this.blockTarget) {
-    //   fetch(this.blockTarget.dataset.fetchUrl, {
-    //     method: 'GET',
-    //     headers: { 'Accept': "application/json" }
-    //   })
-    //     .then(response => response.json())
-    //     .then((data) => {
-    //       console.log(data)
-    //       this.blockTarget.outerHTML = data.block;
-    //     });
-    // }
+    if (this.blockTarget) {
+      fetch(this.blockTarget.dataset.fetchUrl, {
+        method: 'GET',
+        headers: { 'Accept': "application/json" }
+      })
+        .then(response => response.json())
+        .then((data) => {
+          console.log(data)
+          this.blockTarget.outerHTML = data.block;
+        });
+    }
 
 
     // add interval

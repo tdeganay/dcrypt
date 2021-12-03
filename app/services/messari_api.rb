@@ -7,12 +7,11 @@ class MessariApi
     @options = { headers: { "x-messari-api-key": ENV["MESSARI_API_KEY"] } }
   end
 
-  def top_metrics
-    url = '/assets?fields=id,slug,symbol,metrics/market_data/price_usd'
-    res = self.class.get(url, @options)
-    JSON.parse(res.body)
-  end
-
+  # def top_currencies
+  #   url = '/assets?fields=id,slug,symbol,metrics/market_data/price_usd'
+  #   res = self.class.get(url, @options)
+  #   JSON.parsesymbol(res.body)
+  # end
 
   def top_graph(start_date = "2021-10-01", end_date = "2021-11-30")
     start_date = Date.parse(start_date)
@@ -42,7 +41,3 @@ class MessariApi
   end
 
 end
-
-
-
-# <%= area_chart MessariApi.new.top_graph("Bitcoin", "2020-01-01", "2020-01-07") %>

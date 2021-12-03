@@ -1,0 +1,9 @@
+<div class="new-background">
+  <div class="new-form-margin">
+    <%= simple_form_for([@dashboard, @key_figures_block], html: { class: "searchbox", data: {controller: "search-crypto"}}) do |f| %>
+      <%= f.hidden_field :position, value: params[:number] %>
+      <%= f.input :user_string, label: "Please input a search tag", :input_html => { data: { search_crypto_target: "searchInput"}, class: 'form-dark'} %>
+      <%= f.button :submit, "Add a key figures block", class:"primary-button mt-2" %>
+    <% end %>
+  </div>
+</div>

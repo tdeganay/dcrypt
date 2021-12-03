@@ -31,6 +31,8 @@
                   <%= render partial: '/shared/messari_card', locals: {block: position.block} %>
                 <% when 'NewsBlock' %>
                   <%= render partial: '/shared/news_card', locals: {block: position.block} %>
+                <% when 'KeyFiguresBlock' %>
+                  <%= render partial: '/shared/key_figures_card', locals: {block: position.block} %>
                 <% end %>
             <% end %>
           </div>

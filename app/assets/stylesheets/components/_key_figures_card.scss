@@ -1,83 +1,33 @@
 .title-key {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: #c8e6d8;
+  margin: 10px;
+  border-radius: 16px;
   vertical-align: baseline;
   flex-wrap: wrap;
   flex-wrap: 1;
-  margin-bottom: 18px;
 }
 
 .price-key {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 10px;
+  background-color: #c8e6d8;
+  margin: 10px;
+  border-radius: 16px;
   flex-wrap: wrap;
   flex-wrap: 1;
-  margin-bottom: 20px;
 }
 
 .graph-key {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-wrap: 1;
-  p {
-    width: 9%;
-  }
-  .progress {
-    width: 91%;
-  }
-}
-
-.small-div {
-  width: 29.5%;
-  border: solid 1px $green;
-  border-radius: 20px;
-  margin: 0 5px;
-  p {
-    margin: 4px;
-  }
-}
-
-.big-div-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-wrap: 1;
-  width: 100%;
-  border: solid 1px $green;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom: none;
-  margin: 0 5px;
-  position: relative;
-  img {
-    position: absolute;
-    left: 45%;
-    bottom: -12px;
-  }
-  p {
-    margin: 4px;
-  }
-}
-
-.big-div-bot {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-wrap: 1;
-  width: 100%;
-  border: solid 1px $green;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin: 0 5px;
-  p {
-    margin: 4px;
-  }
+  padding: 10px;
+  background-color: #c8e6d8;
+  margin: 10px;
+  border-radius: 16px;
 }
 
 // $red: #f56476;

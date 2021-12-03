@@ -15,13 +15,7 @@ export default class extends Controller {
     console.log(event)
     console.log(this.blockTargets)
     var chart = Chartkick.charts["chart-1"]
-    var chart2 = Chartkick.charts["chart-2"]
-    if (chart) {
     chart.redraw()
-    }
-    if (chart2) {
-    chart2.redraw()
-    }
     console.log(chart)
     const positions = this.blockTargets.map((block, index) => {
     return {index: index + 1,

@@ -32,7 +32,10 @@ export default class extends Controller {
   init() {
 
     this.container = document.createElement('div');
-    this.element.appendChild(this.container);
+    this.container.style.position = "absolute";
+    this.element.style.height = "720px";
+    this.container.style.overflow = "hidden";
+    this.element.insertBefore(this.container, this.element.childNodes[0]);
 
     this.camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1, 10000);
     this.camera.position.z = 1000;
